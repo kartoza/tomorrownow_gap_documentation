@@ -1,0 +1,108 @@
+version: '3.9'
+
+volumes:
+  static-data:
+  media-data:
+  conf-data:
+  database:
+  nginx-cache:
+  backups-data:
+
+x-common-django:
+  &default-common-django
+  image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}:${DJANGO_TAG:-0.0.1}
+  env_file:
+    - .env
+  volumes:
+    - static-data:/home/web/static
+    - media-data:/home/web/media
+  restart: on-failure
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-guest}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-guest}
+    ports:
+      - "5672:5672"
+      - "15672:15672"   # Management UI (optional)
+    restart: on-failure
+
+  memcached:
+    image: memcached:1.6-alpine
+    command: ["memcached", "-m", "128", "-I", "5m"]
+    restart: on-failure
+
+  db:
+    image: kartoza/postgis:17-3.5
+    volumes:
+      - database:/opt/postgres/data
+    environment:
+      - DATADIR=/opt/postgres/data
+      - ALLOW_IP_RANGE=0.0.0.0/0
+      - POSTGRES_DBNAME=${DATABASE_NAME:-django}
+      - POSTGRES_USER=${DATABASE_USERNAME:-docker}
+      - POSTGRES_PASS=${DATABASE_PASSWORD:-docker}
+
+  dbbackups:
+    image: kartoza/pg-backup:17-3.5
+    environment:
+      # take care to let the project name below match that
+      # declared in the top of the makefile
+      - DUMPPREFIX=PG_Django
+      # These are all defaults anyway, but setting explicitly in
+      # case we ever want to ever use different credentials
+      - POSTGRES_USER=${DATABASE_USERNAME:-docker}
+      - POSTGRES_PASS=${DATABASE_PASSWORD:-docker}
+      - POSTGRES_PORT=5432
+      - POSTGRES_HOST=db
+      - POSTGRES_DBNAME=${DATABASE_NAME:-django}
+      - DBLIST=django
+    volumes:
+      - backups-data:/backups
+    restart: on-failure:5
+    links:
+      - db
+
+  django:
+    <<: *default-common-django
+    command: 'uwsgi --ini /uwsgi.conf'
+    depends_on:
+      - db
+      - rabbitmq
+      - memcached
+    links:
+      - db
+      - rabbitmq
+      - memcached
+
+  worker:
+    <<: *default-common-django
+    entrypoint: []
+    command: 'celery -A core worker -l info'
+    links:
+      - db
+      - rabbitmq
+      - memcached
+
+  celery_beat:
+    <<: *default-common-django
+    entrypoint: [ ]
+    command: 'celery -A core beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler'
+    links:
+      - db
+      - rabbitmq
+      - memcached
+
+  nginx:
+    image: nginx
+    hostname: nginx
+    volumes:
+      - conf-data:/etc/nginx/conf.d:ro
+      - static-data:/home/web/static
+      - media-data:/home/web/media
+      - nginx-cache:/home/web/nginx_cache
+    links:
+      - django
