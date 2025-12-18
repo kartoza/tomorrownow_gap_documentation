@@ -36,4 +36,6 @@ license: This program is free software; you can redistribute it and/or modify it
 | Google Graphcast | Google | 27830m | Google WeatherNext Graph Forecasts | | google_graphcast |
 | Google Nowcast | Google | 5km x 5km |  | | google_nowcast |
 
-> Note: The Today value from the CBAM short term weather forecast is store and can be accessed for historical records dating back to 12 October 2024
+> **Note:** The Today value from the CBAM short term weather forecast is stored and can be accessed for historical records dating back to 12 October 2024.
+
+> **Note on Google Gencast and Graphcast lead times:** When Google runs the Gencast model between 00:00 to 12:00, it is marked as 12:00. On GAP, the timestamp is adjusted to 00:00, so the lead time is decreased by 12 hours. The same applies to Graphcast, but with a 6-hour adjustment.

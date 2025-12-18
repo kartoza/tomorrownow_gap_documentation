@@ -11,6 +11,8 @@ license: This program is free software; you can redistribute it and/or modify it
 
 # Google Gencast 15-day Forecast
 
+> **Note on lead times:** When Google runs the Gencast model between 00:00 to 12:00, it is marked as 12:00. On GAP, the timestamp is adjusted to 00:00, so the lead time is decreased by 12 hours.
+
 | Name | Description | Unit | API attribute name |
 |-----|------------|------|--------------------|
 | 10 meter U wind component | Zonal (west–east) component of wind measured at 10 meters above ground | m/s | 10m_u_component_of_wind |
