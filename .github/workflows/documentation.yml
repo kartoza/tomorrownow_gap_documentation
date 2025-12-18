@@ -24,13 +24,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12.0"
-      - name: Install dependencies
-        uses: timlinux/pip-action@v1
-        with:
-          packages: |
-            mkdocs-material 
-            qrcode
-            mkdocs-mermaid2-plugin
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
       - name: Checkout main from github
         uses: actions/checkout@v3
       - name: Create Mkdocs Config 🚀
