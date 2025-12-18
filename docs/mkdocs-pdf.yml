@@ -8,8 +8,8 @@ plugins:
       # https://github.com/orzih/mkdocs-with-pdf
       # And don't get it confused with https://github.com/zhaoterryy/mkdocs-pdf-export-plugin
       # which is intended to export a single page at a time
-      output_path: ../pdfs/[PROJECT_NAME]Documentation.pdf
-      author: Kartoza Pty (Ltd.)
+      output_path: ../pdfs/Documentation.pdf
+      author: Kartoza
       # copyright will draw in page.bottom-right
       # do it manually in templates/styles.scss
       # for more control
@@ -19,9 +19,9 @@ plugins:
       copyright: " "
       cover: true # see templates/cover.html
       back_cover: true
-      cover_title: Title for PDF
-      cover_subtitle: Mappiness is Happiness
-      cover_logo: ./resources/img/logo/kartoza-logo.svg
+      cover_title: Tomorrow Now GAP
+      cover_subtitle: Tomorrow Now GAP
+      # cover_logo: ./resources/img/logo/logo.svg
       # Print css is defined in templates/styles.scss
       #custom_template_path: TEMPLATES PATH
       #

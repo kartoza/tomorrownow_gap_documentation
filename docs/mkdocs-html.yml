@@ -45,14 +45,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/kartoza
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/kartoza/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/KartozaGeo
-    - icon: fontawesome/brands/facebook
-      link: https://kartoza.com
-    - icon: fontawesome/solid/earth-africa
-      link: https://kartoza.com
 
 extra_css:
   - css/print.css
@@ -64,6 +56,7 @@ extra_javascript:
 # Needed for the hooks below to work
 plugins:
   - search
+  - git-revision-date-localized
   - mkdocs-video
   - mkdocstrings:
       handlers:
@@ -88,3 +81,29 @@ plugins:
             merge_init_into_class: true
             docstring_options:
               ignore_init_summary: false
+
+  - redirects:
+      redirect_maps:
+      #see https://github.com/mkdocs/mkdocs-redirects/tree/master#using
+      #'old.md': 'new.md'
+      #'old/file.md': 'new/file.md'
+      #'some_file.md': 'http://external.url.com/foobar'
+  - enumerate-headings:
+      toc_depth: 3
+      strict: true
+      increment_across_pages: true
+      include:
+        - "*"
+      exclude:
+        - index.md
+        - developer/manual/*.md
+      restart_increment_after:
+        - second_section.md
+
+# Hook to add a uuid to every anchor
+# see also hook.py and https://github.com/squidfunk/mkdocs-material/discussions/3758#discussioncomment-4397373
+# Note that although the above link implies you can use UUIDs, you have to use numeric IDS not UUIDS
+hooks:
+  - ./uuid_redirects_hook.py
+  # - ./python_manual_hook.py
+
