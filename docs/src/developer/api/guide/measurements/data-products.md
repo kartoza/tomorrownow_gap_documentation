@@ -21,6 +21,8 @@ license: This program is free software; you can redistribute it and/or modify it
 | Disdrometer (Laser Rain Gauge) | disdrometers | | Tahmo (API) | | disdrometer_ground_observation |
 | Radiosonde Observations (Windborne) | WindBorne Systems | 100 weather balloons | Windborne Systems | | windborne_radiosonde_observation |
 | TAMSAT Precipitation Long-term Normals (20-year) | TAMSAT | | | | tamsat_ltn |
+| Google Gencast | Google | 27830m | Google WeatherNext Gen Forecasts | | google_gencast |
+| Google Graphcast | Google | 27830m | Google WeatherNext Graph Forecasts | | google_graphcast |
 
 
 ## Weather Forecasts
@@ -29,6 +31,9 @@ license: This program is free software; you can redistribute it and/or modify it
 | CBAM Weather Forecast Daily 10-day | Tomorrow.io | 4km x 4km | Tomorrow.io CBAM satellite enhanced short-term weather forecasts | | cbam_shortterm_forecast |
 | CBAM Weather Forecast Hourly 4-day | Tomorrow.io | 4km x 4km | Tomorrow.io CBAM satellite enhanced short-term weather forecasts | | cbam_shortterm_hourly_forecast |
 | Salient Predictions Weather Forecast - Sub-seasonal to Seasonal (8-month) | Salient | 28km x 28km | Salient (API) | v9 | salient_seasonal_forecast |
-| |
+| Salient Predictions Weather Forecast - GEMv2 (3-month) | Salient | 28km x 28km | Salient (API) | v9 | salient_gemv2_forecast |
+| Google Gencast | Google | 27830m | Google WeatherNext Gen Forecasts | | google_gencast |
+| Google Graphcast | Google | 27830m | Google WeatherNext Graph Forecasts | | google_graphcast |
+| Google Nowcast | Google | 5km x 5km |  | | google_nowcast |
 
-> Note: The Today value from the CBAM sort term weather forecast is store and can be accessed for historical records dating back to 12 October 2024
+> Note: The Today value from the CBAM short term weather forecast is store and can be accessed for historical records dating back to 12 October 2024

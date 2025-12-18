@@ -62,7 +62,17 @@ nav:
             - Measurements API:
                 - Overview: developer/api/guide/measurements/overview.md
                 - Data Products: developer/api/guide/measurements/data-products.md
-                - Attributes Reference: developer/api/guide/measurements/attributes-reference.md
+                - Attributes Reference:
+                    - Salient Seasonal Forecast: developer/api/guide/measurements/attributes-reference/salient-seasonal-forecast.md
+                    - CBAM Daily 10-day: developer/api/guide/measurements/attributes-reference/cbam-daily-10day.md
+                    - CBAM Hourly 4-day: developer/api/guide/measurements/attributes-reference/cbam-hourly-4day.md
+                    - CBAM Reanalysis Raw: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-raw.md
+                    - CBAM Reanalysis Bias-Corrected: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-bias-corrected.md
+                    - TAHMO Stations: developer/api/guide/measurements/attributes-reference/tahmo-stations.md
+                    - Arable Stations: developer/api/guide/measurements/attributes-reference/arable-stations.md
+                    - Disdrometer: developer/api/guide/measurements/attributes-reference/disdrometer.md
+                    - Radiosonde: developer/api/guide/measurements/attributes-reference/radiosonde.md
+                    - TAMSAT LTN: developer/api/guide/measurements/attributes-reference/tamsat-ltn.md
                 - Getting Started: developer/api/guide/measurements/getting-started.md
                 - Advanced Usage: developer/api/guide/measurements/advanced-usage.md
             - Access API Using R: developer/api/guide/access-api-using-r.md
