@@ -12,6 +12,11 @@ license: This program is free software; you can redistribute it and/or modify it
 # API user guide
 
 * **[API Keys:](./api-keys.md)** this section shows a tutorial to create and delete API keys.
-* **[Measurement API:](./measurement.md)** this section explains the measurement API guide for both GET and POST method.
+* **[Measurement API:](./measurements/overview.md)** this section explains the measurement API guide for both GET and POST method.
+  * [Overview](./measurements/overview.md) - Introduction to OSIRIS II Global Access Platform
+  * [Data Products](./measurements/data-products.md) - Available weather and climate data products
+  * [Attributes Reference](./measurements/attributes-reference.md) - Complete list of attributes for each product
+  * [Getting Started](./measurements/getting-started.md) - Authentication and basic API usage
+  * [Advanced Usage](./measurements/advanced-usage.md) - Code examples, location upload, and error codes
 * **[Access API Using R:](./access-api-using-r.md)** this section shows a tutorial to access the API using R.
 * **[Access API in Jupyter Notebook:](./access-api-using-jupyter.md)** this section shows a tutorial to access the API in Jupyter Notebook.

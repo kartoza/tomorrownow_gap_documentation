@@ -59,7 +59,12 @@ nav:
         - API Guide:
             - developer/api/guide/index.md
             - API Keys: developer/api/guide/api-keys.md
-            - Measurements API: developer/api/guide/measurement.md
+            - Measurements API:
+                - Overview: developer/api/guide/measurements/overview.md
+                - Data Products: developer/api/guide/measurements/data-products.md
+                - Attributes Reference: developer/api/guide/measurements/attributes-reference.md
+                - Getting Started: developer/api/guide/measurements/getting-started.md
+                - Advanced Usage: developer/api/guide/measurements/advanced-usage.md
             - Access API Using R: developer/api/guide/access-api-using-r.md
             - Access API Using Jupyter Notebook: developer/api/guide/access-api-using-jupyter.md
         - GAP Products:

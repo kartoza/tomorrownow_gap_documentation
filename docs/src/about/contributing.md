@@ -111,7 +111,7 @@ If you are changing functionality, update the tests if you need to.
 
 #### Commit
 
-Follow our [commit message conventions](../developer/guide/templates/commit-message-convention.md).
+Follow our commit message conventions.
 
 ### Yes! Pull request
 
@@ -133,7 +133,7 @@ Follow other PR title format on below.
 #### Description
 
 If it has related issues, add links to the issues(like `#123`) in the description.
-Fill in the [Pull Request Template](../developer/guide/templates/pull-request-template.md) by check your case.
+Fill in the Pull Request Template by checking your case.
 
 ## Code of conduct
 
