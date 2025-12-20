@@ -18,13 +18,13 @@ license: This program is free software; you can redistribute it and/or modify it
 | Electrical Conductivity of Precipitation | | mS/cm | electrical_conductivity_of_precipitation |
 | Electrical Conductivity of Water | | mS/cm | electrical_conductivity_of_water |
 | Lightning Distance | | km | lightning_distance |
+| Precipitation | | mm/day | precipitation |
+| Precipitation Total | | mm | precipitation_total |
+| Relative Humidity | | % | relative_humidity |
 | Shortwave Radiation | | W/m2 | shortwave_radiation |
 | Soil Moisture Content | | m3/m3 | soil_moisture_content |
 | Soil Temperature | | °C | soil_temperature |
 | Surface Air Temperature | | °C | surface_air_temperature |
-| Wind Speed | | m/s | wind_speed |
 | Wind Gusts | | m/s | wind_gusts |
-| Precipitation Total | | mm | precipitation_total |
-| Precipitation | | mm/day | precipitation |
-| Relative Humidity | | % | relative_humidity |
 | Wind Heading | | degree | wind_heading |
+| Wind Speed | | m/s | wind_speed |

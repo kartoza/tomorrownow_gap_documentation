@@ -13,13 +13,13 @@ license: This program is free software; you can redistribute it and/or modify it
 
 | Name | Description | Unit | API attribute name |
 |------|-------------|------|---------------------|
-| Total Rainfall | | mm | total_rainfall |
-| Total Evapotranspiration Flux | | mm | total_evapotranspiration_flux |
-| Temperature | | °C | temperature |
-| Precipitation Probability | | % | precipitation_probability |
-| Humidity | | % | humidity |
-| Wind Speed | | m/s | wind_speed |
-| Solar radiation | | Wh/m2 | solar_radiation |
-| Weather Code | | | weather_code |
 | Flood Index | | | flood_index |
+| Humidity | | % | humidity |
+| Precipitation Probability | | % | precipitation_probability |
+| Solar radiation | | Wh/m2 | solar_radiation |
+| Temperature | | °C | temperature |
+| Total Evapotranspiration Flux | | mm | total_evapotranspiration_flux |
+| Total Rainfall | | mm | total_rainfall |
+| Weather Code | | | weather_code |
 | Wind Direction | | degree | wind_direction |
+| Wind Speed | | m/s | wind_speed |

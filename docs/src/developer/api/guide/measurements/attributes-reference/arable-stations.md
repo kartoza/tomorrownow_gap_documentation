@@ -13,16 +13,16 @@ license: This program is free software; you can redistribute it and/or modify it
 
 | Name | Description | Unit | API attribute name |
 |------|-------------|------|---------------------|
-| Total Evapotranspiration Flux | | mm | total_evapotranspiration_flux |
-| Relative Humidity Max | | % | max_relative_humidity |
 | Max Day Temperature | | °C | max_day_temperature |
-| Relative Humidity Mean | | % | mean_relative_humidity |
 | Mean Day Temperature | | °C | mean_day_temperature |
-| Relative Humidity Min | | % | min_relative_humidity |
 | Min Day Temperature | | °C | min_day_temperature |
-| Precipitation Total | | mm | precipitation_total |
 | Precipitation | | mm/day | precipitation |
+| Precipitation Total | | mm | precipitation_total |
+| Relative Humidity Max | | % | max_relative_humidity |
+| Relative Humidity Mean | | % | mean_relative_humidity |
+| Relative Humidity Min | | % | min_relative_humidity |
 | Sea Level Pressure | | kPa | sea_level_pressure |
+| Total Evapotranspiration Flux | | mm | total_evapotranspiration_flux |
 | Wind Heading | | degree | wind_heading |
 | Wind Speed | | m/s | wind_speed |
 | Wind Speed Max | | m/s | wind_speed_max |

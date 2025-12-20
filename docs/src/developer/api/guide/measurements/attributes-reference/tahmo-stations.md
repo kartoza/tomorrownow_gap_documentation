@@ -13,14 +13,14 @@ license: This program is free software; you can redistribute it and/or modify it
 
 | Name | Description | Unit | API attribute name |
 |------|-------------|------|---------------------|
+| Air Temperature Average | | °C | average_air_temperature |
+| Air Temperature Max | | °C | max_air_temperature |
+| Air Temperature Min | | °C | min_air_temperature |
 | Precipitation | | mm/day | precipitation |
 | Precipitation Total Chirps | | % | precipitation_total_chirps |
 | Precipitation Total Chirps Qflag | | % | precipitation_total_chirps_qflag |
 | Precipitation Total Era5 | | % | precipitation_total_era5 |
 | Precipitation Total Qflag | | % | precipitation_total_qflag |
-| Solar radiation | | Wh/m2 | solar_radiation |
 | Relative Humidity Max | | % | max_relative_humidity |
 | Relative Humidity Min | | % | min_relative_humidity |
-| Air Temperature Average | | °C | average_air_temperature |
-| Air Temperature Max | | °C | max_air_temperature |
-| Air Temperature Min | | °C | min_air_temperature |
+| Solar radiation | | Wh/m2 | solar_radiation |

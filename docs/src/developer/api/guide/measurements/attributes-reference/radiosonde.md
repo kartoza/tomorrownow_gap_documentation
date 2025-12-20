@@ -13,7 +13,7 @@ license: This program is free software; you can redistribute it and/or modify it
 
 | Name | Description | Unit | API attribute name |
 |------|-------------|------|---------------------|
-| Temperature | | °C | temperature |
 | Atmospheric Pressure | | hPa | atmospheric_pressure |
-| Specific Humidity | | mg/kg | specific_humidity |
 | Relative Humidity | | % | relative_humidity |
+| Specific Humidity | | mg/kg | specific_humidity |
+| Temperature | | °C | temperature |

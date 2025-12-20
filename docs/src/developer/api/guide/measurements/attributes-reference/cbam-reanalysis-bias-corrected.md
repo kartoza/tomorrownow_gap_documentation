@@ -13,7 +13,7 @@ license: This program is free software; you can redistribute it and/or modify it
 
 | Name | Description | Unit | API attribute name |
 |------|-------------|------|---------------------|
+| Max Total Temperature | Maximum temperature (0000:2300) | °C | max_temperature |
 | Min Total Temperature | Minimum temperature (0000:2300) | °C | min_temperature |
 | Total Rainfall | Total rainfall (0000:2300) | mm | total_rainfall |
 | Total Solar Irradiance | Total solar irradiance reaching the surface (0000:2300) | MJ/sqm | total_solar_irradiance |
-| Max Total Temperature | Maximum temperature (0000:2300) | °C | max_temperature |

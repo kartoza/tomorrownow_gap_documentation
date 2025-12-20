@@ -113,10 +113,10 @@ You can download the postman collection below and import the API collection usin
 
 | Response code | Message | Reason |
 |---------------|---------|--------|
-| 400 | Unknown geometry type! | Use geometry with type Polygon/Multipolygon/MultiPoint to make a request using POST method |
-| 400 | Output format json is only available for single point query! | JSON output is only available for GET method with singe point query. Please use csv/netcdf output format! |
-| 400 | No matching attribute found! | The attribute list cannot be found in the product type. |
 | 400 | Attribute with ensemble cannot be mixed with non-ensemble | When requesting for product type salient_seasonal_forecast and output is csv, the attribute that is in ensemble (50-values) cannot be requested with the attribute that does not have ensemble. Please use netcdf output format instead! |
 | 400 | Incorrect output type | Use either json, csv, netcdf or ascii |
+| 400 | No matching attribute found! | The attribute list cannot be found in the product type. |
+| 400 | Output format json is only available for single point query! | JSON output is only available for GET method with singe point query. Please use csv/netcdf output format! |
+| 400 | Unknown geometry type! | Use geometry with type Polygon/Multipolygon/MultiPoint to make a request using POST method |
 | 404 | No weather data is found for given queries | |
 | 429 | Too many requests | You have hit the rate limit |
