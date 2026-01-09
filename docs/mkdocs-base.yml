@@ -51,6 +51,7 @@ nav:
             - Django Tables: administrator/manual/django-table.md
             - Add Record in Table: administrator/manual/django-add-record.md
             - Edit Record in Table: administrator/manual/django-change-record.md
+            - Monitor Background Task: administrator/manual/django-monitor-task.md
     - Developers:
         - developer/index.md
         - Architecture: developer/architecture.md
