@@ -1,55 +1,25 @@
-# 🚀 Kartoza Django React
+# Tomorrow Now GAP Documentation
 
-A boilerplate for kickstarting Kartoza Django backend and React frontend projects
+**Project Overview**
 
-## 🌟 Features
-- Django backend with Django Rest Framework (DRF) for API development
-- React frontend with Redux for state management
-- Webpack configurations for modern JavaScript (ES6+) support
-- Responsive design with [MUI](https://mui.com/)
-- Docker and docker-compose support for containerization
-- Code linting with ESLint and Prettier (frontend) and flake8 (backend)
+TomorrowNow.org is partnering with the Bill and Melinda Gates Foundation (BMGF) to develop and assess new weather technologies to support the seed breeding ecosystem in East Africa. The "Next-Gen" project focuses on adopting new or next-generation technologies to improve data access and quality.
 
-## ⚡ Quick Start
+**Goals**
 
+The project aims to address two key challenges limiting the uptake of weather data in Africa:
 
-- Clone the repository
-```
-git clone https://github.com/kartoza/django-react-base.git
-cd django-react-base
-```
+1. **Data Access**: Provide curated datasets from top weather data providers, streamlined APIs, and a global access strategy to ensure long-term, low-cost access to weather data.
 
-- Prepare the files
-```
-./setup.sh
-```
+2. **Data Quality**: Localise forecast models using a network of ground observation stations, apply bias adjustment techniques, and produce analysis-ready datasets using best-practice quality control methods.
 
-- Build the project using the provided command in makefile
-```
-make build
-```
+**Objectives**
 
-- Run the application using Docker and the provided makefile
-```
-make run
-```
+* Improve data quality by measuring and benchmarking data quality and cost across top models for historical climate reanalysis, short-term weather forecasting, and S2S weather forecasting.
 
-- Development using vscode
-- If it has been run before
-```
-make down
-```
-- Run vscode
-```
-./vscode.sh
-```
+* Enhance data access through a global access strategy and partnerships with data providers.
 
+**Impact**
 
-## 📚 Documentation
-For detailed setup instructions, custom configurations, deployment, and additional features, please refer to the wiki.
+By addressing data access and quality challenges, the project aims to accelerate the adoption of weather intelligence across the smallholder farming ecosystem in East Africa.
 
-## 🤝 Contributing
-Contributions are welcome! Please read our contributing guide to learn how you can get involved and help improve this project.
-
-## 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+TomorrowNow provides access to the data through a RESTful API, available at https://gap.tomorrownow.org/api/v1/docs/

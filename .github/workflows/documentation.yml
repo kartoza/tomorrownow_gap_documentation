@@ -4,15 +4,15 @@ on:
     branches:
       - main
     paths:
-      - "documentation.yml"
-      - "docs/**.md"
+      - ".github/workflows/documentation.yml"
+      - "docs/**/*.md"
       - "docs/assets/**"
   pull_request:
     branches:
       - main
     paths:
-      - "documentation.yml"
-      - "docs/**.md"
+      - ".github/workflows/documentation.yml"
+      - "docs/**/*.md"
       - "docs/assets/**"
 
 jobs:
@@ -20,15 +20,17 @@ jobs:
     name: 📖 Publish docs via GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        uses: timlinux/pip-action@v1
+      - name: Set up Python 3.12.0
+        uses: actions/setup-python@v5
         with:
-          packages: |
-            mkdocs-material 
-            qrcode
-            mkdocs-mermaid2-plugin
+          python-version: "3.12.0"
       - name: Checkout main from github
         uses: actions/checkout@v3
+      - name: Install Python dependencies
+        working-directory: ./docs
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
       - name: Create Mkdocs Config 🚀
         working-directory: ./docs
         run: ./create-mkdocs-html-config.sh

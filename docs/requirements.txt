@@ -1,10 +1,15 @@
-mkdocs-mermaid2-plugin
-mkdocs-material
+#Alternative for pdf creation - broken on nixos and lately ubuntu
 mkdocs-with-pdf
-mkdocs-bootswatch
+# Export to pdf - see https://comwes.github.io/mkpdfs-mkdocs-plugin/index.html
+#mkpdfs-mkdocs
+# Rather do
+# pip install -e git+https://github.com/jwaschkau/mkpdfs-mkdocs-plugin.git#egg=mkpdfs-mkdocs
+mkdocs-material>=9.5.32
 mdx_gh_links
 mkdocs-pdf-export-plugin
-mkdocstrings-python
+mkdocstrings==0.26.2
+mkdocstrings-python==1.12.2
+griffe>=0.49,<0.51
 mkdocs-video
 mkdocs-redirects
 mkdocs-enumerate-headings-plugin
@@ -13,3 +18,6 @@ mkdocs-git-revision-date-localized-plugin
 shortuuid
 # Needed for mkdocstrings python documentation generator
 black
+cffi
+# Needed for PDF back page QR Code
+qrcode

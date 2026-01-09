@@ -98,7 +98,7 @@ username : admin
 password : admin
 ```
 
-> 🪧 Now that the application is set up, you may begin making updates or choose to work with the provided demo data. For instructions, please refer to the [Demo Data Guide](../demo-data.md).
+> 🪧 Now that the application is set up, you may begin making updates.
 
 ## Troubleshooting
 
@@ -163,4 +163,4 @@ After that everything above is done, you can move on to [Building the dev enviro
 Press `Ctrl -> P` 1️⃣ and then `>`and search for `Rebuild`. Select `Dev Containers: Rebuild and Reopen in Container`2️⃣. This will essentially mount your code tree inside a docker container and switch the development context of VSCode to be inside the container where all of the python etc. dependencies will be installed.
 
 ![image.png](../img/rebuild.png)
-> 🪧 Now that the application is set up, you may begin making updates or choose to work with the provided demo data. For instructions, please refer to the [Demo Data Guide](../demo-data.md).
+> 🪧 Now that the application is set up, you may begin making updates.

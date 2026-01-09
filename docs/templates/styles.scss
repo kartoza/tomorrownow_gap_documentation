@@ -5,16 +5,16 @@
 @import "variables.scss";
 @import "graphics.scss";
 /* To debug and define css rules, run the generator in debug mode
-   by editing mkdocs-pdf.yml and enabling debug mode. Then
-   redirect the generator output to an html file e.g.
-
-./build-docs-pdf.sh > /tmp/output.html
-xdg-open /tmp/output.html
-
-   Then use the inspect tool in your browser to identify the css paths 
-   of styles you want to modify.
-
-*/
+     by editing mkdocs-pdf.yml and enabling debug mode. Then
+     redirect the generator output to an html file e.g.
+  
+  ./build-docs-pdf.sh > /tmp/output.html
+  xdg-open /tmp/output.html
+  
+     Then use the inspect tool in your browser to identify the css paths 
+     of styles you want to modify.
+  
+  */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -69,10 +69,10 @@ img {
     white-space: normal;
     color: $font-color;
     /* 
-      Margin properties next: 
-
-      See https://www.quackit.com/css/at-rules/css_bottom-left-corner_at-rule.cfm
-      for a nice explanation of the margin properties for css print layouts */
+        Margin properties next: 
+  
+        See https://www.quackit.com/css/at-rules/css_bottom-left-corner_at-rule.cfm
+        for a nice explanation of the margin properties for css print layouts */
 
 
     @top-left-corner {
@@ -98,22 +98,22 @@ img {
 
     @top-center {
         /* Idiosyncratic note: The top center section is the 
-           only one that you can expand out to the full width of the page.
-           Also: The left elements will render under it, the right elements
-           over it (the z order increases as you move right).
-
-           Be careful trying to use a PNG background as the DPI is hard to configure
-           and your graphics will appear pixelated or not scale correctly 
-           so rather use an SVG.
-
-           The setup below will span your SVG across the page, make sure your
-           SVG document has exactly the same dimensions. Leave a pixel or two
-           white space to the very right of your SVG as the right edge is 
-           difficult to page align.
-           */
+             only one that you can expand out to the full width of the page.
+             Also: The left elements will render under it, the right elements
+             over it (the z order increases as you move right).
+  
+             Be careful trying to use a PNG background as the DPI is hard to configure
+             and your graphics will appear pixelated or not scale correctly 
+             so rather use an SVG.
+  
+             The setup below will span your SVG across the page, make sure your
+             SVG document has exactly the same dimensions. Leave a pixel or two
+             white space to the very right of your SVG as the right edge is 
+             difficult to page align.
+             */
         background-color: transparent;
         /* Dont remove these two lines, they force the center element
-           to the width of the page and height of the footer image. */
+             to the width of the page and height of the footer image. */
         min-width: 210mm;
         min-height: 22mm;
         background-repeat: no-repeat;
@@ -150,22 +150,22 @@ img {
 
     @bottom-center {
         /* Idiosyncratic note: The bottom center section is the 
-           only one that you can expand out to the full width of the page.
-           Also: The left elements will render under it, the right elements
-           over it (the z order increases as you move right).
-
-           Be careful trying to use a PNG background as the DPI is hard to configure
-           and your graphics will appear pixelated or not scale correctly 
-           so rather use an SVG.
-
-           The setup below will span your SVG across the page, make sure your
-           SVG document has exactly the same dimensions. Leave a pixel or two
-           white space to the very right of your SVG as the right edge is 
-           difficult to page align.
-           */
+             only one that you can expand out to the full width of the page.
+             Also: The left elements will render under it, the right elements
+             over it (the z order increases as you move right).
+  
+             Be careful trying to use a PNG background as the DPI is hard to configure
+             and your graphics will appear pixelated or not scale correctly 
+             so rather use an SVG.
+  
+             The setup below will span your SVG across the page, make sure your
+             SVG document has exactly the same dimensions. Leave a pixel or two
+             white space to the very right of your SVG as the right edge is 
+             difficult to page align.
+             */
         background-color: transparent;
         /* Dont remove these two lines, they force the center element
-           to the width of the page and height of the footer image. */
+             to the width of the page and height of the footer image. */
         min-width: 210mm;
         min-height: 22mm;
         background-repeat: no-repeat;
@@ -174,7 +174,7 @@ img {
         size: 210mm 22mm;
         background: $footer-url;
         /* Note you cannot do concatenation in CSS content 
-          except I figured out this little trick below TS */
+            except I figured out this little trick below TS */
         content: " " counter(page) " ";
     }
 
@@ -313,12 +313,12 @@ article h4 {
 }
 
 /* MKdocs renders code blocks inside a pre element and 
-  inline code simply inside code elements 
-  
-  Code block related items below are based on the article
-  at https://css-tricks.com/styling-code-in-and-out-of-blocks/
-  
-  */
+    inline code simply inside code elements 
+    
+    Code block related items below are based on the article
+    at https://css-tricks.com/styling-code-in-and-out-of-blocks/
+    
+    */
 
 code {
     font-family: monospace;
@@ -375,7 +375,7 @@ pre code {
     font-size: $code-font-size;
     font-family: $code-font-family;
     /* margin: 1em 3em; 
-    */
+      */
     padding: 1em 1em;
     margin-left: 8px;
     margin-top: 1em;
@@ -438,15 +438,6 @@ dl {
     page-break-before: avoid;
 }
 
-table>tbody>tr>td>img {
-    height: 80px;
-    width: 80px;
-}
-
-
-
-/* Next section based on https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
-
 table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -458,6 +449,8 @@ table {
     margin-right: auto;
 }
 
+
+/* Next section based on https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
 
 table thead tr {
     background-color: $primary-color;

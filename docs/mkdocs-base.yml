@@ -1,88 +1,95 @@
-site_name: Project Name
+site_name: Tomorrow Now GAP
 site_description: "Project technical and user documentation."
 site_author: "Kartoza"
 docs_dir: ./src
 site_dir: ./site
-repo_name: "Project Name"
-repo_url: "https://github.com/kartoza/<project name>"
-edit_uri: "https://github.com/kartoza/<project name>/blob/main/docs/"
+repo_name: "TomorrowNowGAP"
+repo_url: "https://github.com/kartoza/tomorrownow_gap.git"
+edit_uri: "https://github.com/kartoza/tomorrownow_gap/blob/main/docs/"
 
 copyright: Kartoza and Contributors
 
 markdown_extensions:
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.details
-  - pymdownx.emoji
-  - pymdownx.tasklist
-  - pymdownx.snippets
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.caret
-  - attr_list
+  - attr_list # lets us resize images see https://github.com/mkdocs/mkdocs/issues/1678#issuecomment-455500757
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  # - mdx_truly_sane_lists
+  #- mdx_truly_sane_lists
   - toc:
       permalink: true
-      # slugify: !!python/name:pymdownx.slugs.slugify
+      #slugify: !!python/name:pymdownx.slugs.slugify
   - pymdownx.snippets:
       base_path: .
   - admonition
   - tables
-#  - pymdownx.superfences:
-#      custom_fences:
-#        - name: mermaid
-#          class: mermaid
-#          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.emoji:
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  # Navigation
-  - Home:
-      - Home: index.md
-      - Code of Conduct: about/code-of-conduct.md
-      - License: about/license.md
-      - Running Instances: about/running-instances.md
-  - User:
-      - user/index.md
-      - Quickstart: user/quickstart/index.md
-      - Guide:
-          - user/guide/index.md
-      - Manual:
-          - user/manual/index.md
-  - Administrators:
-      - administrator/index.md
-      - Guide:
-          - administrator/guide/index.md
-      - Manual:
-          - administrator/manual/index.md
-  - Developers:
-      - developer/index.md
-      - Django Application:
-          - Overview: developer/django/architecture-overview.md
-          - Coding Standard: developer/django/coding_standard.md
-          - Getting Started:
-              - "Before you start": developer/django/setup/index.md
-              - "Windows 11 Pro": developer/django/setup/setup-win/index.md
-              - "macOS 15": developer/django/setup/setup-mac/index.md
-              - "Ubuntu Linux 24.04 LTR": developer/django/setup/setup-linux/index.md
-              - "Generic Steps":
-                  - "Overview": developer/django/setup/setup-generic/index.md
-                  - "Cloning": developer/django/setup/setup-generic/cloning.md
-                  - "Configuration": developer/django/setup/setup-generic/configuration.md
-                  - "Running":
-                      - "Overview": developer/django/setup/setup-generic/run/index.md
-                      - "VSCode": developer/django/setup/setup-generic/run/run-with-vscode.md
-                      - "CLI": developer/django/setup/setup-generic/run/run-without-ide.md
-                  - "Removing": developer/django/setup/setup-generic/removing.md
-  - About:
-      - About: about/index.md
-      - License: about/license.md
-      - Contributing: about/contributing.md
-      - Disclaimer: about/disclaimer.md
-
+    - Home:
+        - index.md
+        - quick_installation.md
+    - Administrators:
+        - administrator/index.md
+        - Guide:
+            - administrator/guide/index.md
+            - Access Admin Panel: administrator/guide/access-admin-panel.md
+        - Manual:
+            - administrator/manual/index.md
+            - Django Administration: administrator/manual/django-admin.md
+            - Django Tables: administrator/manual/django-table.md
+            - Add Record in Table: administrator/manual/django-add-record.md
+            - Edit Record in Table: administrator/manual/django-change-record.md
+    - Developers:
+        - developer/index.md
+        - Architecture: developer/architecture.md
+        - Data model: developer/data-model.md
+        - Hyrax Configuration: developer/hyrax-config.md
+        - API Guide:
+            - developer/api/guide/index.md
+            - API Keys: developer/api/guide/api-keys.md
+            - Measurements API:
+                - Overview: developer/api/guide/measurements/overview.md
+                - Ingestor Schedule: developer/api/guide/measurements/ingestor-schedule.md
+                - Data Products: developer/api/guide/measurements/data-products.md
+                - Attributes Reference:
+                    - Arable Stations: developer/api/guide/measurements/attributes-reference/arable-stations.md
+                    - CBAM Daily 10-day: developer/api/guide/measurements/attributes-reference/cbam-daily-10day.md
+                    - CBAM Hourly 4-day: developer/api/guide/measurements/attributes-reference/cbam-hourly-4day.md
+                    - CBAM Reanalysis Bias-Corrected: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-bias-corrected.md
+                    - CBAM Reanalysis Hourly: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-hourly.md
+                    - CBAM Reanalysis Raw: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-raw.md
+                    - Disdrometer: developer/api/guide/measurements/attributes-reference/disdrometer.md
+                    - Google GenCast: developer/api/guide/measurements/attributes-reference/google-gencast.md
+                    - Google GraphCast: developer/api/guide/measurements/attributes-reference/google-graphcast.md
+                    - Google Nowcast: developer/api/guide/measurements/attributes-reference/google-nowcast.md
+                    - Radiosonde: developer/api/guide/measurements/attributes-reference/radiosonde.md
+                    - Salient GEMV2: developer/api/guide/measurements/attributes-reference/salient-gemv2.md
+                    - Salient Seasonal Forecast: developer/api/guide/measurements/attributes-reference/salient-seasonal-forecast.md
+                    - TAHMO Stations: developer/api/guide/measurements/attributes-reference/tahmo-stations.md
+                    - TAMSAT LTN: developer/api/guide/measurements/attributes-reference/tamsat-ltn.md
+                - Getting Started: developer/api/guide/measurements/getting-started.md
+                - Advanced Usage: developer/api/guide/measurements/advanced-usage.md
+            - Access API Using R: developer/api/guide/access-api-using-r.md
+            - Access API Using Jupyter Notebook: developer/api/guide/access-api-using-jupyter.md
+        - GAP Products:
+            - developer/geoparquet/index.md
+            - SPW: developer/geoparquet/spw.md
+            - SPW Tamsat: developer/geoparquet/spw-tamsat.md
+            - DCAS: developer/geoparquet/dcas.md
+    - Devops:
+        - devops/index.md
+        - Guide: devops/guide/index.md
+        - Manual: devops/manual/index.md
+        - Migration: devops/migration/index.md
