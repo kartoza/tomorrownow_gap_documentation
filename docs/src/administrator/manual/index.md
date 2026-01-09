@@ -22,3 +22,5 @@ Welcome to the TOMORROW.NOW administrator manual. This section of the documentat
 * **[Add Record in Taable:](./django-add-record.md)** this section explains the addition of record on the Django administration site.
 
 * **[Edit Record in Table:](./django-change-record.md)** this section explains the editing of data on the Django administration the site.
+
+* **[Monitor Background Task:](./django-monitor-task.md)** this section explains how to monitor background task.
