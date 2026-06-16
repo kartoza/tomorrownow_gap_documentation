@@ -38,8 +38,8 @@ This tutorial demonstrates how to download a NetCDF file from GAP API, save it l
 
 1. **Download the sample code**
 
-    - You can download the full code from [here](https://github.com/kartoza/tomorrownow_gap/blob/main/examples/sample.ipynb).
-    - There is also a python sample code that you can download from [here](https://github.com/kartoza/tomorrownow_gap/blob/main/examples/sample.py). You can use this sample code to run without jupyter notebook by running: `python sample.py`.
+    - You can download the full code from [here](https://github.com/kartoza/tomorrownow_gap_documentation/blob/main/examples/sample.ipynb).
+    - There is also a python sample code that you can download from [here](https://github.com/kartoza/tomorrownow_gap_documentation/blob/main/examples/sample.py). You can use this sample code to run without jupyter notebook by running: `python sample.py`.
 
 
 2. **Open Jupyter Notebook**: Launch the notebook by running:
