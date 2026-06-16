@@ -7,26 +7,26 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Project technical and user documentation." name="description"/>
 <meta content="Kartoza" name="author"/>
-<link href="../overview/" rel="prev"/>
-<link href="../data-products/" rel="next"/>
-<link href="../../../../../assets/logo.png" rel="icon"/>
+<link href="../developer/geoparquet/dcas/" rel="prev"/>
+<link href="../devops/" rel="next"/>
+<link href="../assets/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Ingestor Schedule - Tomorrow Now GAP</title>
-<link href="../../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
-<link href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<title>TomorrowNow - Global Access Platform (GAP) - Tomorrow Now GAP</title>
+<link href="../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet"/>
-<link href="../../../../../css/print.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../css/print.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="grey" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#gap-ingestor-schedule">17. 
+<a class="md-skip" href="#connecting-gap-mcp-to-claudeai">42. 
           Skip to content
         </a>
 </div>
@@ -34,7 +34,7 @@
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Tomorrow Now GAP" class="md-header__button md-logo" data-md-component="logo" href="../../../../.." title="Tomorrow Now GAP">
+<a aria-label="Tomorrow Now GAP" class="md-header__button md-logo" data-md-component="logo" href=".." title="Tomorrow Now GAP">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -50,7 +50,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Ingestor Schedule
+              TomorrowNow - Global Access Platform (GAP)
             
           </span>
 </div>
@@ -116,7 +116,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../..">
+<a class="md-tabs__link" href="..">
           
   
   
@@ -127,7 +127,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../administrator/">
+<a class="md-tabs__link" href="../administrator/">
           
   
   
@@ -137,8 +137,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../../">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../developer/">
           
   
   
@@ -148,8 +148,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../mcp/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
           
   
   
@@ -160,7 +160,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../devops/">
+<a class="md-tabs__link" href="../devops/">
           
   
   
@@ -182,7 +182,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Tomorrow Now GAP" class="md-nav__button md-logo" data-md-component="logo" href="../../../../.." title="Tomorrow Now GAP">
+<a aria-label="Tomorrow Now GAP" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Tomorrow Now GAP">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path></svg>
 </a>
     Tomorrow Now GAP
@@ -201,7 +201,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../..">
+<a class="md-nav__link" href="..">
 <span class="md-ellipsis">
     
   
@@ -226,7 +226,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../quick_installation/">
+<a class="md-nav__link" href="../quick_installation/">
 <span class="md-ellipsis">
     
   
@@ -243,7 +243,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../../administrator/">
+<a class="md-nav__link" href="../administrator/">
 <span class="md-ellipsis">
     
   
@@ -270,7 +270,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../../administrator/guide/">
+<a class="md-nav__link" href="../administrator/guide/">
 <span class="md-ellipsis">
     
   
@@ -295,7 +295,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../administrator/guide/access-admin-panel/">
+<a class="md-nav__link" href="../administrator/guide/access-admin-panel/">
 <span class="md-ellipsis">
     
   
@@ -312,7 +312,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../../administrator/manual/">
+<a class="md-nav__link" href="../administrator/manual/">
 <span class="md-ellipsis">
     
   
@@ -337,7 +337,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../administrator/manual/django-admin/">
+<a class="md-nav__link" href="../administrator/manual/django-admin/">
 <span class="md-ellipsis">
     
   
@@ -349,7 +349,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../administrator/manual/django-table/">
+<a class="md-nav__link" href="../administrator/manual/django-table/">
 <span class="md-ellipsis">
     
   
@@ -361,7 +361,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../administrator/manual/django-add-record/">
+<a class="md-nav__link" href="../administrator/manual/django-add-record/">
 <span class="md-ellipsis">
     
   
@@ -373,7 +373,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../administrator/manual/django-change-record/">
+<a class="md-nav__link" href="../administrator/manual/django-change-record/">
 <span class="md-ellipsis">
     
   
@@ -390,10 +390,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../">
+<a class="md-nav__link" href="../developer/">
 <span class="md-ellipsis">
     
   
@@ -403,11 +403,11 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -418,7 +418,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../architecture/">
+<a class="md-nav__link" href="../developer/architecture/">
 <span class="md-ellipsis">
     
   
@@ -430,7 +430,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../data-model/">
+<a class="md-nav__link" href="../developer/data-model/">
 <span class="md-ellipsis">
     
   
@@ -442,7 +442,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../hyrax-config/">
+<a class="md-nav__link" href="../developer/hyrax-config/">
 <span class="md-ellipsis">
     
   
@@ -453,10 +453,10 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
+<a class="md-nav__link" href="../developer/api/guide/">
 <span class="md-ellipsis">
     
   
@@ -466,11 +466,11 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
             
@@ -481,7 +481,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api-keys/">
+<a class="md-nav__link" href="../developer/api/guide/api-keys/">
 <span class="md-ellipsis">
     
   
@@ -492,8 +492,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_5_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -505,7 +505,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_5_3_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_5_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -516,7 +516,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../overview/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/overview/">
 <span class="md-ellipsis">
     
   
@@ -527,9 +527,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../developer/api/guide/measurements/ingestor-schedule/">
 <span class="md-ellipsis">
     
   
@@ -541,7 +540,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data-products/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/data-products/">
 <span class="md-ellipsis">
     
   
@@ -576,7 +575,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/arable-stations/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/arable-stations/">
 <span class="md-ellipsis">
     
   
@@ -588,7 +587,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/cbam-daily-10day/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/cbam-daily-10day/">
 <span class="md-ellipsis">
     
   
@@ -600,7 +599,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/cbam-hourly-4day/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/cbam-hourly-4day/">
 <span class="md-ellipsis">
     
   
@@ -612,7 +611,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/cbam-reanalysis-bias-corrected/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/cbam-reanalysis-bias-corrected/">
 <span class="md-ellipsis">
     
   
@@ -624,7 +623,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/cbam-reanalysis-hourly/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/cbam-reanalysis-hourly/">
 <span class="md-ellipsis">
     
   
@@ -636,7 +635,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/cbam-reanalysis-raw/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/cbam-reanalysis-raw/">
 <span class="md-ellipsis">
     
   
@@ -648,7 +647,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/disdrometer/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/disdrometer/">
 <span class="md-ellipsis">
     
   
@@ -660,7 +659,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/google-gencast/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/google-gencast/">
 <span class="md-ellipsis">
     
   
@@ -672,7 +671,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/google-graphcast/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/google-graphcast/">
 <span class="md-ellipsis">
     
   
@@ -684,7 +683,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/google-nowcast/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/google-nowcast/">
 <span class="md-ellipsis">
     
   
@@ -696,7 +695,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/radiosonde/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/radiosonde/">
 <span class="md-ellipsis">
     
   
@@ -708,7 +707,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/salient-gemv2/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/salient-gemv2/">
 <span class="md-ellipsis">
     
   
@@ -720,7 +719,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/salient-seasonal-forecast/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/salient-seasonal-forecast/">
 <span class="md-ellipsis">
     
   
@@ -732,7 +731,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/tahmo-stations/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/tahmo-stations/">
 <span class="md-ellipsis">
     
   
@@ -744,7 +743,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../attributes-reference/tamsat-ltn/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/attributes-reference/tamsat-ltn/">
 <span class="md-ellipsis">
     
   
@@ -759,7 +758,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../getting-started/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/getting-started/">
 <span class="md-ellipsis">
     
   
@@ -771,7 +770,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../advanced-usage/">
+<a class="md-nav__link" href="../developer/api/guide/measurements/advanced-usage/">
 <span class="md-ellipsis">
     
   
@@ -786,7 +785,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../access-api-using-r/">
+<a class="md-nav__link" href="../developer/api/guide/access-api-using-r/">
 <span class="md-ellipsis">
     
   
@@ -798,7 +797,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../access-api-using-jupyter/">
+<a class="md-nav__link" href="../developer/api/guide/access-api-using-jupyter/">
 <span class="md-ellipsis">
     
   
@@ -812,10 +811,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../geoparquet/">
+<a class="md-nav__link" href="../developer/geoparquet/">
 <span class="md-ellipsis">
     
   
@@ -825,7 +824,7 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
@@ -840,7 +839,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../geoparquet/spw/">
+<a class="md-nav__link" href="../developer/geoparquet/spw/">
 <span class="md-ellipsis">
     
   
@@ -852,7 +851,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../geoparquet/spw-tamsat/">
+<a class="md-nav__link" href="../developer/geoparquet/spw-tamsat/">
 <span class="md-ellipsis">
     
   
@@ -864,7 +863,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../geoparquet/dcas/">
+<a class="md-nav__link" href="../developer/geoparquet/dcas/">
 <span class="md-ellipsis">
     
   
@@ -881,10 +880,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../../mcp/">
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -895,7 +894,7 @@
   </span>
 </a>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             
@@ -911,7 +910,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../../devops/">
+<a class="md-nav__link" href="../devops/">
 <span class="md-ellipsis">
     
   
@@ -936,7 +935,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../devops/guide/">
+<a class="md-nav__link" href="../devops/guide/">
 <span class="md-ellipsis">
     
   
@@ -948,7 +947,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../devops/manual/">
+<a class="md-nav__link" href="../devops/manual/">
 <span class="md-ellipsis">
     
   
@@ -960,7 +959,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../devops/migration/">
+<a class="md-nav__link" href="../devops/migration/">
 <span class="md-ellipsis">
     
   
@@ -983,110 +982,183 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-prompts-to-try">42.1 
+<span class="md-ellipsis">
+      
+        Sample Prompts to Try
+      
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<div><h1 id="gap-ingestor-schedule"><span class="enumerate-headings-plugin enumerate-heading-plugin">17.</span> GAP Ingestor Schedule<a class="headerlink" href="#gap-ingestor-schedule" title="Permanent link">¶</a></h1>
-<p>Below is the ingestor schedule of datasets in GAP.</p>
+<div><h1 id="connecting-gap-mcp-to-claudeai"><span class="enumerate-headings-plugin enumerate-heading-plugin">42.</span> Connecting GAP MCP to Claude.ai<a class="headerlink" href="#connecting-gap-mcp-to-claudeai" title="Permanent link">¶</a></h1>
+<p>The GAP platform exposes its tools (weather, advisory, spatial, agromet, and more) through an
+<a href="https://modelcontextprotocol.io">MCP</a> server. You can connect this server to
+<a href="https://claude.ai">Claude.ai</a> as a <strong>custom connector</strong>, which lets Claude call GAP tools directly
+during a conversation.</p>
+<p>This guide walks through adding the GAP MCP connector in the Claude.ai browser app and authorizing it
+with your GAP account.</p>
+<ol>
+<li><strong>Open the Connectors settings</strong></li>
+</ol>
+<p>In Claude.ai, click the <strong>Settings</strong> icon 1️⃣ in the left sidebar, then select <strong>Connectors</strong> 2️⃣
+   from the Customize menu. Click the <strong>+</strong> button 3️⃣ to add a new connector.</p>
+<p><img alt="Open connectors settings" src="img/claude-mcp-1.png"/></p>
+<ol>
+<li><strong>Add a custom connector</strong></li>
+</ol>
+<p>From the dropdown menu, choose <strong>Add custom connector</strong> 3️⃣.</p>
+<p><img alt="Add custom connector menu" src="img/claude-mcp-2.png"/></p>
+<ol>
+<li><strong>Enter the GAP MCP details</strong></li>
+</ol>
+<p>In the <strong>Add custom connector</strong> dialog:</p>
+<div class="highlight"><pre><span></span><code>  - Give the connector a **name** 1️⃣, for example `gap-prd`.
+  - Enter the GAP MCP server **URL** 2️⃣, for example `https://gap.tomorrownow.org/mcp`.
+  - Leave **OAuth Client ID** and **OAuth Client Secret** under *Advanced settings* empty — the
+    GAP MCP server handles authorization automatically in a later step.
+  - Click **Add** 3️⃣.
+</code></pre></div>
+<p><img alt="Add custom connector dialog" src="img/claude-mcp-3.png"/></p>
+<ol>
+<li><strong>Connect the new connector</strong></li>
+</ol>
+<p>The connector now appears in the list under <strong>Not connected</strong> 1️⃣. Click <strong>Connect</strong> 2️⃣ to start
+   authorization.</p>
+<p><img alt="New connector listed as not connected" src="img/claude-mcp-4.png"/></p>
+<ol>
+<li><strong>Sign in to GAP</strong></li>
+</ol>
+<p>You will be redirected to the GAP Global Access Platform login page. Enter your registered
+   <strong>email</strong> 1️⃣ and <strong>password</strong> 2️⃣, then click <strong>Sign In</strong> 3️⃣.</p>
+<p><img alt="Sign in to the GAP platform" src="img/claude-mcp-5.png"/></p>
+<ol>
+<li><strong>Authorize Claude</strong></li>
+</ol>
+<p>GAP will ask you to confirm that Claude may access the GAP MCP connector. Click <strong>Authorize</strong> 1️⃣.</p>
+<p><img alt="Authorize Claude to access the GAP MCP connector" src="img/claude-mcp-6.png"/></p>
+<ol>
+<li><strong>Confirm the connection</strong></li>
+</ol>
+<p>You are returned to Claude.ai with a <strong>Connected to gap-prd</strong> confirmation 1️⃣. Below the connector
+   details, the <strong>Tool permissions</strong> list shows every GAP tool exposed by the MCP server (over 100
+   tools, such as <code>gap_advisory_crop_suitability</code>, <code>gap_agromet_calculate_indices</code>, and
+   <code>gap_weather_get_forecast</code>). For each tool you can choose whether Claude is always allowed to use
+   it, must ask first, or is never allowed to use it.</p>
+<p><img alt="GAP connector connected with tool permissions list" src="img/claude-mcp-7.png"/></p>
+<p>Once connected, the GAP tools become available to Claude in any conversation — start a new chat and
+ask a GAP-related question (for example, a weather forecast or crop advisory) to see Claude call the
+connector.</p>
+<h2 id="sample-prompts-to-try"><span class="enumerate-headings-plugin enumerate-heading-plugin">42.1</span> Sample Prompts to Try<a class="headerlink" href="#sample-prompts-to-try" title="Permanent link">¶</a></h2>
+<p>You don't need to know the exact tool names — speak naturally and mention the <strong>location</strong>, the
+<strong>crop</strong> (if relevant), and what you want to <strong>do</strong> with the answer (e.g. "for a radio bulletin" or
+"as an SMS"). Claude picks the right GAP tools for you. Here are some prompts to get started:</p>
 <table>
 <thead>
 <tr>
-<th>Dataset</th>
-<th>Frequency</th>
-<th>Model Run (UTC)</th>
-<th>Model Available (UTC)</th>
-<th>GAP Start Time (UTC)</th>
-<th>GAP End Time (UTC)</th>
-<th>Available Time (UTC)</th>
-<th>Retention Policy</th>
+<th>#</th>
+<th>Domain</th>
+<th>Example Prompt</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>CBAM Daily Short-Term Forecast 00Z</td>
-<td>Once per day</td>
-<td>00:00:00</td>
-<td>–</td>
-<td>00:10:00</td>
-<td>02:13:00</td>
-<td>02:23:00</td>
-<td>Stored in the latest and historical Zarr</td>
+<td>1</td>
+<td>Weather</td>
+<td>"What's the weather in Kisumu this week?"</td>
 </tr>
 <tr>
-<td>CBAM Daily Short-Term Forecast 06Z</td>
-<td>Twice per day</td>
-<td>06:00:00</td>
-<td>–</td>
-<td>08:30:00</td>
-<td>09:20:00</td>
-<td>09:40:00</td>
-<td>–</td>
+<td>2</td>
+<td>Land Preparation</td>
+<td>"Is it safe to plant maize near Bomet?"</td>
 </tr>
 <tr>
-<td>CBAM Hourly Short-Term Forecast</td>
-<td>Once per day</td>
-<td>–</td>
-<td>–</td>
-<td>00:30:00</td>
-<td>06:03:00</td>
-<td>06:43:00</td>
-<td>Stored in the latest Zarr only (no historical archive)</td>
+<td>3</td>
+<td>Crop Protection</td>
+<td>"Can I spray tomorrow morning? I'm near Nakuru."</td>
 </tr>
 <tr>
-<td>Google GenCast</td>
-<td>Once per day</td>
-<td>00:00:00</td>
-<td>08:05:00</td>
-<td>09:05:00</td>
-<td>09:43</td>
-<td>10:00</td>
-<td>Stored in the latest and historical Zarr</td>
+<td>4</td>
+<td>Nutrient Management</td>
+<td>"Best day to apply urea this week in Chipata?"</td>
 </tr>
 <tr>
-<td>Google GraphCast</td>
-<td>Once per day</td>
-<td>18:00:00</td>
-<td>00:45:00</td>
-<td>02:00:00</td>
-<td>02:30:00</td>
-<td>02:35:00</td>
-<td>Stored in the latest and historical Zarr</td>
+<td>5</td>
+<td>Harvest</td>
+<td>"When can we harvest near Homa Bay? Need 3 dry days."</td>
 </tr>
 <tr>
-<td>Google Nowcast</td>
-<td>Four times per day (every 6 hours at :15 UTC)</td>
-<td>–</td>
-<td>–</td>
-<td>00:15:00<br/>06:15:00<br/>12:15:00<br/>18:15:00</td>
-<td>00:45:00<br/>06:45:00<br/>12:45:00<br/>18:45:00</td>
-<td>02:25:00<br/>07:00:00<br/>13:00:00<br/>19:00:00</td>
-<td>00:00 and 12:00 models stored in the historical Zarr</td>
+<td>6</td>
+<td>All Domains</td>
+<td>"Give me a complete farm advisory for Njoro, maize, vegetative stage."</td>
 </tr>
 <tr>
-<td>Salient</td>
-<td>Once per week (every Monday)</td>
-<td>–</td>
-<td>–</td>
-<td>04:00:00</td>
-<td>04:52:00</td>
-<td>05:58:00</td>
-<td>Stored in the latest and historical Zarr</td>
+<td>7</td>
+<td>Land Preparation</td>
+<td>"Compare planting conditions at these 5 locations: [lat/lon list]"</td>
 </tr>
 <tr>
-<td>Salient GEMV2</td>
-<td>Once per week (every Monday)</td>
-<td>–</td>
-<td>–</td>
-<td>10:00:00</td>
-<td>10:05:00</td>
-<td>10:55:00</td>
-<td>Stored in the latest and historical Zarr</td>
+<td>8</td>
+<td>Delivery</td>
+<td>"Create an SMS in Swahili for farmers to wait before planting."</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Validation</td>
+<td>"How are our forecasts performing for Kenya this month?"</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Validation</td>
+<td>"Which weather model is most accurate for Zambia right now?"</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Hazards</td>
+<td>"Check heat stress conditions for dairy cows near Kiambu."</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Crop Monitoring</td>
+<td>"What agro-ecological zone is -1.2, 36.8?"</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Weather</td>
+<td>"Write a 200-word weather bulletin for Western Kenya radio."</td>
+</tr>
+<tr>
+<td>14</td>
+<td>All Domains</td>
+<td>"Generate a DCAS synthesis for maize near Njoro with confidence scoring."</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Data Quality</td>
+<td>"Were there any data quality issues in this week's Kenya advisories?"</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<p>Tips for better conversations:</p>
+<ul>
+<li><strong>Start simple, then drill down.</strong> Ask a broad question first, then follow up on the details that matter.</li>
+<li><strong>Mention your location.</strong> City names work; coordinates are even better.</li>
+<li><strong>Say what crop and stage.</strong> "Maize in vegetative stage" gives different advice than "beans at planting."</li>
+<li><strong>Follow up freely.</strong> Claude remembers your conversation, so you don't need to repeat location or crop details.</li>
+<li><strong>Ask "why."</strong> If a recommendation surprises you, ask why — Claude will show the underlying data and thresholds.</li>
+</ul></div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
@@ -1131,9 +1203,9 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../../../js/tablesort.js"></script>
+<script src="../js/tablesort.js"></script>
 </body>
 </html>
