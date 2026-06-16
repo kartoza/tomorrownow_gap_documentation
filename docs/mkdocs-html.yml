@@ -97,6 +97,7 @@ plugins:
       exclude:
         - index.md
         - developer/manual/*.md
+        - mcp/index.md
       restart_increment_after:
         - second_section.md
 
