@@ -21,62 +21,52 @@ with your GAP account.
 
 1. **Open the Connectors settings**
 
-In Claude.ai, click the **Settings** icon 1️⃣ in the left sidebar, then select **Connectors** 2️⃣
-from the Customize menu. Click the **+** button 3️⃣ to add a new connector.
+    In Claude.ai, click the **Settings** icon 1️⃣ in the left sidebar, then select **Connectors** 2️⃣ from the Customize menu. Click the **+** button 3️⃣ to add a new connector.
 
-![Open connectors settings](./img/claude-mcp-1.png)
+    ![Open connectors settings](./img/claude-mcp-1.png)
 
 2. **Add a custom connector**
 
-From the dropdown menu, choose **Add custom connector** 3️⃣.
+    From the dropdown menu, choose **Add custom connector** 3️⃣.
 
-![Add custom connector menu](./img/claude-mcp-2.png)
+    ![Add custom connector menu](./img/claude-mcp-2.png)
 
 3. **Enter the GAP MCP details**
 
-In the **Add custom connector** dialog:
+    In the **Add custom connector** dialog:
 
-- Give the connector a **name** 1️⃣, for example `gap-prd`.
-- Enter the GAP MCP server **URL** 2️⃣, for example `https://gap.tomorrownow.org/mcp`.
-- Leave **OAuth Client ID** and **OAuth Client Secret** under *Advanced settings* empty — the
-  GAP MCP server handles authorization automatically in a later step.
-- Click **Add** 3️⃣.
+    - Give the connector a **name** 1️⃣, for example `gap-prd`.
+    - Enter the GAP MCP server **URL** 2️⃣, for example `https://gap.tomorrownow.org/mcp`.
+    - Leave **OAuth Client ID** and **OAuth Client Secret** under *Advanced settings* empty — the GAP MCP server handles authorization automatically in a later step.
+    - Click **Add** 3️⃣.
 
-![Add custom connector dialog](./img/claude-mcp-3.png)
+    ![Add custom connector dialog](./img/claude-mcp-3.png)
 
 4. **Connect the new connector**
 
-The connector now appears in the list under **Not connected** 1️⃣. Click **Connect** 2️⃣ to start
-authorization.
+    The connector now appears in the list under **Not connected** 1️⃣. Click **Connect** 2️⃣ to start authorization.
 
-![New connector listed as not connected](./img/claude-mcp-4.png)
+    ![New connector listed as not connected](./img/claude-mcp-4.png)
 
 5. **Sign in to GAP**
 
-You will be redirected to the GAP Global Access Platform login page. Enter your registered
-**email** 1️⃣ and **password** 2️⃣, then click **Sign In** 3️⃣.
+    You will be redirected to the GAP Global Access Platform login page. Enter your registered **email** 1️⃣ and **password** 2️⃣, then click **Sign In** 3️⃣.
 
-![Sign in to the GAP platform](./img/claude-mcp-5.png)
+    ![Sign in to the GAP platform](./img/claude-mcp-5.png)
 
 6. **Authorize Claude**
 
-GAP will ask you to confirm that Claude may access the GAP MCP connector. Click **Authorize** 1️⃣.
+    GAP will ask you to confirm that Claude may access the GAP MCP connector. Click **Authorize** 1️⃣.
 
-![Authorize Claude to access the GAP MCP connector](./img/claude-mcp-6.png)
+    ![Authorize Claude to access the GAP MCP connector](./img/claude-mcp-6.png)
 
 7. **Confirm the connection**
 
-You are returned to Claude.ai with a **Connected to gap-prd** confirmation 1️⃣. Below the connector
-details, the **Tool permissions** list shows every GAP tool exposed by the MCP server (over 100
-tools, such as `gap_advisory_crop_suitability`, `gap_agromet_calculate_indices`, and
-`gap_weather_get_forecast`). For each tool you can choose whether Claude is always allowed to use
-it, must ask first, or is never allowed to use it.
+    You are returned to Claude.ai with a **Connected to gap-prd** confirmation 1️⃣. Below the connector details, the **Tool permissions** list shows every GAP tool exposed by the MCP server (over 100 tools, such as `gap_advisory_crop_suitability`, `gap_agromet_calculate_indices`, and `gap_weather_get_forecast`). For each tool you can choose whether Claude is always allowed to use it, must ask first, or is never allowed to use it.
 
-![GAP connector connected with tool permissions list](./img/claude-mcp-7.png)
+    ![GAP connector connected with tool permissions list](./img/claude-mcp-7.png)
 
-Once connected, the GAP tools become available to Claude in any conversation — start a new chat and
-ask a GAP-related question (for example, a weather forecast or crop advisory) to see Claude call the
-connector.
+    Once connected, the GAP tools become available to Claude in any conversation — start a new chat and ask a GAP-related question (for example, a weather forecast or crop advisory) to see Claude call the connector.
 
 ## Sample Prompts to Try
 
