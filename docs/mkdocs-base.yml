@@ -88,6 +88,8 @@ nav:
             - SPW: developer/geoparquet/spw.md
             - SPW Tamsat: developer/geoparquet/spw-tamsat.md
             - DCAS: developer/geoparquet/dcas.md
+    - MCP:
+        - mcp/index.md
     - Devops:
         - devops/index.md
         - Guide: devops/guide/index.md
