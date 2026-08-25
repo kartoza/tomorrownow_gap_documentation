@@ -10,9 +10,9 @@
 <link href="../measurements/advanced-usage/" rel="prev"/>
 <link href="../access-api-using-jupyter/" rel="next"/>
 <link href="../../../../assets/logo.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
 <title>Documentation - Tomorrow Now GAP</title>
-<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -26,7 +26,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#accessing-gap-api-using-r">36. 
+<a class="md-skip" href="#accessing-gap-api-using-r">37. 
           Skip to content
         </a>
 </div>
@@ -378,6 +378,18 @@
     
   
     Edit Record in Table
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../administrator/manual/django-monitor-task/">
+<span class="md-ellipsis">
+    
+  
+    Monitor Background Task
   
 
     
@@ -814,7 +826,7 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">36.1 
+<a class="md-nav__link" href="#requirements">37.1 
 <span class="md-ellipsis">
       
         Requirements
@@ -823,7 +835,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#running-the-code">36.2 
+<a class="md-nav__link" href="#running-the-code">37.2 
 <span class="md-ellipsis">
       
         Running the Code
@@ -832,7 +844,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#expected-output">36.3 
+<a class="md-nav__link" href="#expected-output">37.3 
 <span class="md-ellipsis">
       
         Expected Output
@@ -841,7 +853,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exploring-the-dataset">36.4 
+<a class="md-nav__link" href="#exploring-the-dataset">37.4 
 <span class="md-ellipsis">
       
         Exploring the Dataset
@@ -1044,7 +1056,7 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">36.1 
+<a class="md-nav__link" href="#requirements">37.1 
 <span class="md-ellipsis">
       
         Requirements
@@ -1053,7 +1065,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#running-the-code">36.2 
+<a class="md-nav__link" href="#running-the-code">37.2 
 <span class="md-ellipsis">
       
         Running the Code
@@ -1062,7 +1074,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#expected-output">36.3 
+<a class="md-nav__link" href="#expected-output">37.3 
 <span class="md-ellipsis">
       
         Expected Output
@@ -1071,7 +1083,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exploring-the-dataset">36.4 
+<a class="md-nav__link" href="#exploring-the-dataset">37.4 
 <span class="md-ellipsis">
       
         Exploring the Dataset
@@ -1086,9 +1098,9 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<div><h1 id="accessing-gap-api-using-r"><span class="enumerate-headings-plugin enumerate-heading-plugin">36.</span> Accessing GAP API using R<a class="headerlink" href="#accessing-gap-api-using-r" title="Permanent link">¶</a></h1>
+<div><h1 id="accessing-gap-api-using-r"><span class="enumerate-headings-plugin enumerate-heading-plugin">37.</span> Accessing GAP API using R<a class="headerlink" href="#accessing-gap-api-using-r" title="Permanent link">¶</a></h1>
 <p>This tutorial demonstrates how to download a NetCDF file from GAP API, save it locally, and read it using R. We'll use httr for downloading the file and the ncdf4 library for reading NetCDF data.</p>
-<h2 id="requirements"><span class="enumerate-headings-plugin enumerate-heading-plugin">36.1</span> Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<h2 id="requirements"><span class="enumerate-headings-plugin enumerate-heading-plugin">37.1</span> Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p><strong>R Environment</strong>:</p>
@@ -1117,7 +1129,7 @@
 <p>For windows, you can follow the installation guide of ncdf4 from this <a href="https://cirrus.ucsd.edu/~pierce/ncdf/#:~:text=Installation&amp;text=Windows%3A%20Use%20the%20R%20graphical,9.">link</a>.</p>
 </li>
 </ol>
-<h2 id="running-the-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">36.2</span> Running the Code<a class="headerlink" href="#running-the-code" title="Permanent link">¶</a></h2>
+<h2 id="running-the-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">37.2</span> Running the Code<a class="headerlink" href="#running-the-code" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p><strong>Download the sample code</strong></p>
@@ -1173,7 +1185,7 @@
 <p><strong>Run the code using</strong>: <code>Code -&gt; Run Region -&gt; Run All</code>.</p>
 </li>
 </ol>
-<h2 id="expected-output"><span class="enumerate-headings-plugin enumerate-heading-plugin">36.3</span> Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">¶</a></h2>
+<h2 id="expected-output"><span class="enumerate-headings-plugin enumerate-heading-plugin">37.3</span> Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">¶</a></h2>
 <p><strong>If the download is successful:</strong></p>
 <ol>
 <li>
@@ -1214,7 +1226,7 @@
 <p>The script will display an error message with the HTTP status code, e.g.:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>Failed to download file. HTTP Status Code: 404
 </code></pre></div>
-<h2 id="exploring-the-dataset"><span class="enumerate-headings-plugin enumerate-heading-plugin">36.4</span> Exploring the Dataset<a class="headerlink" href="#exploring-the-dataset" title="Permanent link">¶</a></h2>
+<h2 id="exploring-the-dataset"><span class="enumerate-headings-plugin enumerate-heading-plugin">37.4</span> Exploring the Dataset<a class="headerlink" href="#exploring-the-dataset" title="Permanent link">¶</a></h2>
 <p>After successfully loading the file:</p>
 <ol>
 <li>
@@ -1247,7 +1259,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 21:04:10 UTC">June 16, 2026</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 25, 2026 05:13:26 UTC">August 25, 2026</span>
 </span>
 </aside>
 </article>
@@ -1287,7 +1299,7 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../../js/tablesort.js"></script>
 </body>
