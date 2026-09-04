@@ -57,3 +57,12 @@ either completes, is withheld, or is recorded as failed, and that outcome is par
 of the advisory's record. Because the decision is never re-made per channel, a
 delivery failure on one channel does not change the advice itself — only whether,
 and how, it reached the recipient.
+
+## Message authoring
+
+The wording a farmer receives is treated as reviewed content, not free text
+generated at send time. A resolved advisory is rendered into messages through
+controlled authoring, so the language for each variant is validated before it can
+be released. This keeps delivery consistent with the review step in
+[Release and approval](release-and-approval.md), where a reviewer must see every
+distinct message variant before dispatch.

@@ -67,3 +67,20 @@ Each phase contributes to the decision trace: Sense produces signals, Model
 produces features, Assess produces assessments, and Resolve produces policy
 decisions and recommendations. The phases and the trace node types line up
 deliberately. See [Decision trace and confidence](decision-trace.md).
+
+## Prepared on demand or ahead of time
+
+The same phases run whether an advisory is produced when a request arrives or
+prepared ahead of time by a scheduled build (a "warm path"). Preparing advisories
+in advance lets a later request be answered from an already-built result rather
+than recomputed, which is why the Intake phase can complete a request on a cache
+hit. A prepared advisory records when its inputs were produced, so a consumer can
+tell a current answer from a stale one — see
+[Observability and degradation](observability.md).
+
+## Single-point query
+
+An advisory can be requested for a single point — a location and context — and
+answered directly through the pipeline. Because every entry point converges on the
+same orchestration, a single-point request returns the same advice it would
+receive through any other surface, with the same trace and confidence.
