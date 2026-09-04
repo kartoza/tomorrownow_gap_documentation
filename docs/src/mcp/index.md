@@ -9,12 +9,32 @@ contact: danang@kartoza.com
 license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 ---
 
-# Connecting GAP MCP to Claude.ai
+# GAP MCP
 
-The GAP platform exposes its tools (weather, advisory, spatial, agromet, and more) through an
-[MCP](https://modelcontextprotocol.io) server. You can connect this server to
-[Claude.ai](https://claude.ai) as a **custom connector**, which lets Claude call GAP tools directly
-during a conversation.
+The GAP platform exposes its tools (weather, advisory, spatial, agromet, and more) through a
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io) server. MCP is a composable
+server pattern over standard HTTP and JSON: it presents capabilities as named, callable **tools**,
+so many kinds of client — reasoning agents, applications, and scheduled campaigns — can call the
+same governed capabilities through one contract. It is an architectural pattern rather than a
+dependency on any single vendor.
+
+The MCP server is one protocol surface in the platform's interface layer, alongside the HTTP API. It
+is a door into the system, not the system itself: a tool handler validates a request, resolves the
+tenant, and delegates inward, but never computes an advisory itself. Every surface converges on the
+same pipeline, so an advisory cannot differ by the door it came through.
+
+Learn more:
+
+- [Tools and handlers](tools-and-handlers.md) — the contract a caller sees versus the code that
+  services it.
+- [Calling a tool](calling-a-tool.md) — a generic walkthrough of a single tool call.
+- [GAP Agentic architecture](../developer/gap-agentic/architecture.md) — where MCP sits in the
+  layered platform.
+
+## Connecting GAP MCP to Claude.ai
+
+You can connect this server to [Claude.ai](https://claude.ai) as a **custom connector**, which lets
+Claude call GAP tools directly during a conversation.
 
 This guide walks through adding the GAP MCP connector in the Claude.ai browser app and authorizing it
 with your GAP account.
