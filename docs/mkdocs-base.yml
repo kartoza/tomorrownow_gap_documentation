@@ -89,8 +89,31 @@ nav:
             - SPW: developer/geoparquet/spw.md
             - SPW Tamsat: developer/geoparquet/spw-tamsat.md
             - DCAS: developer/geoparquet/dcas.md
+        - GAP Agentic:
+            - Overview: developer/gap-agentic/index.md
+            - Architecture: developer/gap-agentic/architecture.md
+            - Repositories and components: developer/gap-agentic/repositories-and-components.md
+            - Advisory lifecycle: developer/gap-agentic/advisory-lifecycle.md
+            - Decision trace and confidence: developer/gap-agentic/decision-trace.md
+            - Index and policy engines: developer/gap-agentic/index-and-policy-engines.md
+            - Weather-source selection: developer/gap-agentic/weather-selection.md
+            - Delivery orchestration: developer/gap-agentic/delivery-orchestration.md
+            - Caching and multi-tenancy: developer/gap-agentic/caching-and-multitenancy.md
+            - Observability and degradation: developer/gap-agentic/observability.md
+            - Sovereign deployment: developer/gap-agentic/sovereign-deployment.md
+            - Operator consoles: developer/gap-agentic/operator-consoles.md
+            - Qualification, adoption and binding: developer/gap-agentic/qualification-adoption-and-binding.md
+            - Release and approval: developer/gap-agentic/release-and-approval.md
+            - Local development: developer/gap-agentic/local-development.md
+            - Running tests: developer/gap-agentic/running-tests.md
+            - Running an advisory: developer/gap-agentic/running-an-advisory.md
+            - Troubleshooting: developer/gap-agentic/troubleshooting.md
+            - Specified vs implemented: developer/gap-agentic/specified-vs-implemented.md
+            - Glossary: developer/gap-agentic/glossary.md
     - MCP:
-        - mcp/index.md
+        - Overview: mcp/index.md
+        - Tools and handlers: mcp/tools-and-handlers.md
+        - Calling a tool: mcp/calling-a-tool.md
     - Devops:
         - devops/index.md
         - Guide: devops/guide/index.md
