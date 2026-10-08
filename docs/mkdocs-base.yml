@@ -4,8 +4,8 @@ site_author: "Kartoza"
 docs_dir: ./src
 site_dir: ./site
 repo_name: "TomorrowNowGAP"
-repo_url: "https://github.com/kartoza/tomorrownow_gap.git"
-edit_uri: "https://github.com/kartoza/tomorrownow_gap/blob/main/docs/"
+repo_url: "https://github.com/kartoza/tomorrownow_gap_documentation"
+edit_uri: "edit/main/docs/src/"
 
 copyright: Kartoza and Contributors
 
@@ -62,24 +62,28 @@ nav:
             - API Keys: developer/api/guide/api-keys.md
             - Measurements API:
                 - Overview: developer/api/guide/measurements/overview.md
-                - Ingestor Schedule: developer/api/guide/measurements/ingestor-schedule.md
+                - Forecast Availability: developer/api/guide/measurements/ingestor-schedule.md
                 - Data Products: developer/api/guide/measurements/data-products.md
+                - Product Changes: developer/api/guide/measurements/product-changes.md
                 - Attributes Reference:
-                    - Arable Stations: developer/api/guide/measurements/attributes-reference/arable-stations.md
-                    - CBAM Daily 10-day: developer/api/guide/measurements/attributes-reference/cbam-daily-10day.md
-                    - CBAM Hourly 4-day: developer/api/guide/measurements/attributes-reference/cbam-hourly-4day.md
-                    - CBAM Reanalysis Bias-Corrected: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-bias-corrected.md
-                    - CBAM Reanalysis Hourly: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-hourly.md
-                    - CBAM Reanalysis Raw: developer/api/guide/measurements/attributes-reference/cbam-reanalysis-raw.md
-                    - Disdrometer: developer/api/guide/measurements/attributes-reference/disdrometer.md
-                    - Google GenCast: developer/api/guide/measurements/attributes-reference/google-gencast.md
-                    - Google GraphCast: developer/api/guide/measurements/attributes-reference/google-graphcast.md
-                    - Google Nowcast: developer/api/guide/measurements/attributes-reference/google-nowcast.md
-                    - Radiosonde: developer/api/guide/measurements/attributes-reference/radiosonde.md
-                    - Salient GEMV2: developer/api/guide/measurements/attributes-reference/salient-gemv2.md
-                    - Salient Seasonal Forecast: developer/api/guide/measurements/attributes-reference/salient-seasonal-forecast.md
-                    - TAHMO Stations: developer/api/guide/measurements/attributes-reference/tahmo-stations.md
-                    - TAMSAT LTN: developer/api/guide/measurements/attributes-reference/tamsat-ltn.md
+                    - Index: developer/api/guide/measurements/attributes-reference.md
+                    - NextGen daily forecasts: developer/api/guide/measurements/attributes-reference/nextgen-daily.md
+                    - NextGen hourly forecasts: developer/api/guide/measurements/attributes-reference/nextgen-hourly.md
+                    - KMSA Kenya daily rainfall forecast: developer/api/guide/measurements/attributes-reference/kenya-rainfall.md
+                    - Google WeatherNext 2: developer/api/guide/measurements/attributes-reference/weathernext2.md
+                    - Daily precipitation forecast: developer/api/guide/measurements/attributes-reference/precipitation-blend.md
+                    - NeuralGCM S2S: developer/api/guide/measurements/attributes-reference/neuralgcm.md
+                    - IMERG V07 daily rainfall: developer/api/guide/measurements/attributes-reference/imerg.md
+                    - Arable weather stations: developer/api/guide/measurements/attributes-reference/arable-stations.md
+                    - TAHMO weather stations: developer/api/guide/measurements/attributes-reference/tahmo-stations.md
+                    - Disdrometer observations: developer/api/guide/measurements/attributes-reference/disdrometer.md
+                    - Windborne radiosonde observations: developer/api/guide/measurements/attributes-reference/radiosonde.md
+                    - TAMSAT rainfall long-term normals: developer/api/guide/measurements/attributes-reference/tamsat-ltn.md
+                    - iSDA Soil: developer/api/guide/measurements/attributes-reference/isda-soil.md
+                    - SoilGrids v2: developer/api/guide/measurements/attributes-reference/soilgrids.md
+                    - "Legacy: Google GenCast — Nigeria": developer/api/guide/measurements/attributes-reference/google-gencast-nigeria.md
+                    - "Legacy: CBAM daily reanalysis — raw": developer/api/guide/measurements/attributes-reference/cbam-reanalysis-raw.md
+                    - "Legacy: CBAM daily reanalysis — bias-corrected": developer/api/guide/measurements/attributes-reference/cbam-reanalysis-bias-corrected.md
                 - Getting Started: developer/api/guide/measurements/getting-started.md
                 - Advanced Usage: developer/api/guide/measurements/advanced-usage.md
             - Access API Using R: developer/api/guide/access-api-using-r.md

@@ -1,29 +1,25 @@
----
-title: Automated Weather Stations (Arable) 2024-2025
-summary: Attributes for Arable Automated Weather Stations
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# Arable weather stations
 
-# Automated Weather Stations (Arable) 2024-2025
+Station observations. The catalogue is labelled 2024–2025; individual station coverage can differ. A location request is subject to station availability and access permissions.
 
-| Name | Description | Unit | API attribute name |
-|------|-------------|------|---------------------|
-| Max Day Temperature | | °C | max_day_temperature |
-| Mean Day Temperature | | °C | mean_day_temperature |
-| Min Day Temperature | | °C | min_day_temperature |
-| Precipitation | | mm/day | precipitation |
-| Precipitation Total | | mm | precipitation_total |
-| Relative Humidity Max | | % | max_relative_humidity |
-| Relative Humidity Mean | | % | mean_relative_humidity |
-| Relative Humidity Min | | % | min_relative_humidity |
-| Sea Level Pressure | | kPa | sea_level_pressure |
-| Total Evapotranspiration Flux | | mm | total_evapotranspiration_flux |
-| Wind Heading | | degree | wind_heading |
-| Wind Speed | | m/s | wind_speed |
-| Wind Speed Max | | m/s | wind_speed_max |
-| Wind Speed Min | | m/s | wind_speed_min |
+## `arable_ground_observation`
+
+Catalogue label: **Automated Weather Stations (Arable)  /  2024-2025**.
+
+| API attribute | Name / meaning | Output unit | Ensemble field |
+|---|---|---|---|
+| `total_evapotranspiration_flux` | Total Evapotranspiration flux with respect to grass cover (0000:2300) | mm | No |
+| `max_relative_humidity` | Relative Humidity Max | % | No |
+| `max_day_temperature` | Maximum day-time temperature (0600:1800) | °C | No |
+| `min_relative_humidity` | Relative Humidity Min | % | No |
+| `min_day_temperature` | Minumum day-time temperature (0600:1800) | °C | No |
+| `precipitation_total` | Precipitation total | mm | No |
+| `precipitation` | Precipitation | mm | No |
+| `sea_level_pressure` | Sea Level Pressure | kPa | No |
+| `wind_heading` | Wind Heading | degree | No |
+| `wind_speed` | Wind speed | m/s | No |
+| `wind_speed_max` | Wind Speed Max | m/s | No |
+| `wind_speed_min` | Wind speed Min | m/s | No |
+
+
+[Choose another product](../data-products.md) · [Request parameters](../getting-started.md)

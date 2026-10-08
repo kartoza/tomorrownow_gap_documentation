@@ -1,25 +1,29 @@
----
-title: CBAM Daily Reanalysis (Raw) 2012-2024 v2
-summary: Attributes for CBAM Daily Reanalysis Raw
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# CBAM daily reanalysis — raw
 
-# CBAM Daily Reanalysis (Raw) 2012-2024 v2
+> **Legacy product.** Still served for existing integrations, but not recommended for new work. For historical rainfall use [IMERG V07](imerg.md).
 
-| Name | Description | Unit | API attribute name |
-|------|-------------|------|---------------------|
-| Average Solar Irradiance | Average hourly solar irradiance reaching the surface (0600:1800) | MJ/sqm | average_solar_irradiance |
-| Max Day Temperature | Maximum day-time temperature (0600:1800) | °C | max_day_temperature |
-| Max Night Temperature | Maximum night-time temperature (1900:0500) | °C | max_night_temperature |
-| Max Total Temperature | Maximum temperature (0000:2300) | °C | max_temperature |
-| Min Day Temperature | Minimum day-time temperature (0600:1800) | °C | min_day_temperature |
-| Min Night Temperature | Minimum night-time temperature (1900:0500) | °C | min_night_temperature |
-| Min Total Temperature | Minimum temperature (0000:2300) | °C | min_temperature |
-| Total Evapotranspiration Flux | Total Evapotranspiration flux with respect to grass cover (0000:2300) | mm | total_evapotranspiration_flux |
-| Total Rainfall | Total rainfall (0000:2300) | mm | total_rainfall |
-| Total Solar Irradiance | Total solar irradiance reaching the surface (0000:2300) | MJ/sqm | total_solar_irradiance |
+Historical daily reanalysis, catalogue labelled 2012–2024 v2. This remains available independently of the retirement of legacy short-term forecast products.
+
+## `cbam_historical_analysis`
+
+Catalogue label: **CBAM Daily Reanalysis (Raw)  /  2012-2024  /  v2**.
+
+| API attribute | Name / meaning | Output unit | Ensemble field |
+|---|---|---|---|
+| `total_evapotranspiration_flux` | Total Evapotranspiration flux with respect to grass cover (0000:2300) | mm | No |
+| `max_temperature` | Maximum temperature (0000:2300) | °C | No |
+| `max_night_temperature` | Maximum night-time temperature (1900:0500) | °C | No |
+| `average_solar_irradiance` | Average hourly solar irradiance reaching the surface (0600:1800) | MJ/sqm | No |
+| `total_solar_irradiance` | Total solar irradiance reaching the surface (0000:2300) | MJ/sqm | No |
+| `min_night_temperature` | Minimum night-time temperature (1900:0500) | °C | No |
+| `max_day_temperature` | Maximum day-time temperature (0600:1800) | °C | No |
+| `total_rainfall` | Total rainfall (0000:2300) | mm | No |
+| `min_day_temperature` | Minumum day-time temperature (0600:1800) | °C | No |
+| `min_temperature` | Minumum temperature (0000:2300) | °C | No |
+| `average_vapor_pressure` | Average Vapor Pressure | Pa | No |
+| `wind_speed_avg` | The fundamental atmospheric quantity caused by air moving from high to low pressure, usually due to changes in temperature (at 10m) | m/s | No |
+| `min_relative_humidity` | Relative Humidity Min | % | No |
+| `max_relative_humidity` | Relative Humidity Max | % | No |
+
+
+[Choose another product](../data-products.md) · [Request parameters](../getting-started.md)

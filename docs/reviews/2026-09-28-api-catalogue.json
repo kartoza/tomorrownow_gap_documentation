@@ -1,0 +1,336 @@
+{
+  "api_commit": "3e81a69374b80d1839c6c0c49c26458dd47cb962",
+  "retirement_pr": 1717,
+  "blend_pr": 1718,
+  "products": {
+    "nextgen_forecast": {
+      "page": "nextgen-daily.md",
+      "attributes": [
+        "precip_accum_p10",
+        "precip_accum_p25",
+        "precip_accum_p50",
+        "precip_accum_p90",
+        "precip_probability_max",
+        "tmin_c",
+        "tmax_c",
+        "rh_min_pct",
+        "rh_max_pct",
+        "wind_mean_ms",
+        "wind_max_ms",
+        "gust_max_ms",
+        "solar_mjm2",
+        "et0_mm",
+        "et0_raw_mm",
+        "precip_accum_p75",
+        "rh_mean_pct",
+        "rh_min_pct_p75",
+        "rh_max_pct_p75",
+        "rh_mean_pct_p75",
+        "rh_max_pct_p50",
+        "rh_min_pct_p50",
+        "rh_mean_pct_p50"
+      ]
+    },
+    "nigeria_nextgen_daily_forecast": {
+      "page": "nextgen-daily.md",
+      "attributes": [
+        "precip_accum_p10",
+        "precip_accum_p25",
+        "precip_accum_p50",
+        "precip_accum_p90",
+        "precip_probability_max",
+        "tmin_c",
+        "tmax_c",
+        "rh_min_pct",
+        "rh_max_pct",
+        "wind_mean_ms",
+        "wind_max_ms",
+        "gust_max_ms",
+        "solar_mjm2",
+        "et0_mm",
+        "et0_raw_mm",
+        "precip_accum_p75",
+        "rh_mean_pct",
+        "rh_min_pct_p75",
+        "rh_max_pct_p75",
+        "rh_mean_pct_p75",
+        "rh_max_pct_p50",
+        "rh_min_pct_p50",
+        "rh_mean_pct_p50"
+      ]
+    },
+    "nextgen_hourly_forecast": {
+      "page": "nextgen-hourly.md",
+      "attributes": [
+        "precip_intensity_p10",
+        "precip_intensity_p25",
+        "precip_intensity_p50",
+        "precip_intensity_p90",
+        "precip_probability",
+        "temp_c",
+        "rh_pct",
+        "wind_ms",
+        "gust_ms",
+        "solar_wm2",
+        "precip_intensity_p75",
+        "rh_pct_p75",
+        "rh_pct_p50"
+      ]
+    },
+    "nigeria_nextgen_hourly_forecast": {
+      "page": "nextgen-hourly.md",
+      "attributes": [
+        "precip_intensity_p10",
+        "precip_intensity_p25",
+        "precip_intensity_p50",
+        "precip_intensity_p90",
+        "precip_probability",
+        "temp_c",
+        "rh_pct",
+        "wind_ms",
+        "gust_ms",
+        "solar_wm2",
+        "precip_intensity_p75",
+        "rh_pct_p75",
+        "rh_pct_p50"
+      ]
+    },
+    "google_weathernext2": {
+      "page": "weathernext2.md",
+      "attributes": [
+        "total_precipitation_6hr",
+        "10m_u_component_of_wind",
+        "10m_v_component_of_wind",
+        "temperature"
+      ]
+    },
+    "precipitation_blend_forecast": {
+      "page": "precipitation-blend.md",
+      "attributes": [
+        "blend_p_occurrence",
+        "blend_p_heavy",
+        "blend_mean",
+        "blend_std",
+        "blend_q10",
+        "blend_q25",
+        "blend_median",
+        "blend_q75",
+        "blend_q90",
+        "blend_iqr",
+        "blend_p_gt_1mm",
+        "blend_p_gt_5mm",
+        "blend_p_gt_10mm",
+        "blend_p_gt_20mm",
+        "blend_p_gt_50mm",
+        "blend_w_probability",
+        "blend_w_p_heavy",
+        "blend_event",
+        "blend_heavy",
+        "blend_consensus_mm",
+        "blend_scenario",
+        "blend_confidence",
+        "precipitation",
+        "primary",
+        "blend_model_scenario",
+        "blend_n_models",
+        "blend_w_occ_gc",
+        "blend_w_amt_gc",
+        "blend_w_amt_heavy_gc",
+        "blend_w_heavy_gc"
+      ]
+    },
+    "kenya_rainfall_daily": {
+      "page": "kenya-rainfall.md",
+      "attributes": [
+        "precipitation"
+      ]
+    },
+    "neuralgcm_s2s": {
+      "page": "neuralgcm.md",
+      "attributes": [
+        "2m_temperature",
+        "2m_dewpoint_temperature",
+        "total_precipitation_6hr"
+      ]
+    },
+    "neuralgcm_s2s_realtime": {
+      "page": "neuralgcm.md",
+      "attributes": [
+        "2m_temperature",
+        "2m_dewpoint_temperature",
+        "total_precipitation_6hr"
+      ]
+    },
+    "imerg_v07": {
+      "page": "imerg.md",
+      "attributes": [
+        "precipitation"
+      ]
+    },
+    "arable_ground_observation": {
+      "page": "arable-stations.md",
+      "attributes": [
+        "total_evapotranspiration_flux",
+        "max_relative_humidity",
+        "max_day_temperature",
+        "min_relative_humidity",
+        "min_day_temperature",
+        "precipitation_total",
+        "precipitation",
+        "sea_level_pressure",
+        "wind_heading",
+        "wind_speed",
+        "wind_speed_max",
+        "wind_speed_min"
+      ]
+    },
+    "tahmo_ground_observation": {
+      "page": "tahmo-stations.md",
+      "attributes": [
+        "min_air_temperature",
+        "max_air_temperature",
+        "average_air_temperature",
+        "min_relative_humidity",
+        "max_relative_humidity",
+        "solar_radiation",
+        "precipitation",
+        "precipitation_total_era5",
+        "precipitation_total_chirps",
+        "precipitation_total_qflag",
+        "precipitation_total_chirps_qflag"
+      ]
+    },
+    "disdrometer_ground_observation": {
+      "page": "disdrometer.md",
+      "attributes": [
+        "atmospheric_pressure",
+        "depth_of_water",
+        "electrical_conductivity_of_precipitation",
+        "electrical_conductivity_of_water",
+        "lightning_distance",
+        "shortwave_radiation",
+        "soil_moisture_content",
+        "soil_temperature",
+        "surface_air_temperature",
+        "wind_speed",
+        "wind_gusts",
+        "precipitation_total",
+        "precipitation",
+        "relative_humidity",
+        "wind_heading"
+      ]
+    },
+    "windborne_radiosonde_observation": {
+      "page": "radiosonde.md",
+      "attributes": [
+        "relative_humidity",
+        "specific_humidity",
+        "atmospheric_pressure",
+        "temperature",
+        "wind_speed_u",
+        "wind_speed_v"
+      ]
+    },
+    "tamsat_ltn": {
+      "page": "tamsat-ltn.md",
+      "attributes": [
+        "precipitation_total"
+      ]
+    },
+    "isda_soil": {
+      "page": "isda-soil.md",
+      "attributes": [
+        "ph_0_20",
+        "clay_0_20",
+        "sand_0_20",
+        "slope",
+        "texture_class"
+      ]
+    },
+    "soilgrids_v2": {
+      "page": "soilgrids.md",
+      "attributes": [
+        "clay_0_5",
+        "clay_5_15",
+        "clay_15_30",
+        "sand_0_5",
+        "sand_5_15",
+        "sand_15_30",
+        "silt_0_5",
+        "silt_5_15",
+        "silt_15_30",
+        "cfvo_0_5",
+        "cfvo_5_15",
+        "cfvo_15_30",
+        "bdod_0_5",
+        "bdod_5_15",
+        "bdod_15_30",
+        "soc_0_5",
+        "soc_5_15",
+        "soc_15_30",
+        "phh2o_0_5",
+        "phh2o_5_15",
+        "phh2o_15_30",
+        "nitrogen_0_5",
+        "nitrogen_5_15",
+        "nitrogen_15_30",
+        "clay_30_60",
+        "clay_60_100",
+        "sand_30_60",
+        "sand_60_100",
+        "silt_30_60",
+        "silt_60_100",
+        "cfvo_30_60",
+        "cfvo_60_100",
+        "bdod_30_60",
+        "bdod_60_100",
+        "soc_30_60",
+        "soc_60_100",
+        "phh2o_30_60",
+        "phh2o_60_100",
+        "nitrogen_30_60",
+        "nitrogen_60_100",
+        "slope",
+        "phosphorus_0_20",
+        "potassium_0_20"
+      ]
+    },
+    "google_gencast_2_nigeria": {
+      "page": "google-gencast-nigeria.md",
+      "attributes": [
+        "total_precipitation_6hr",
+        "10m_u_component_of_wind",
+        "10m_v_component_of_wind",
+        "2m_temperature"
+      ]
+    },
+    "cbam_historical_analysis": {
+      "page": "cbam-reanalysis-raw.md",
+      "attributes": [
+        "total_evapotranspiration_flux",
+        "max_temperature",
+        "max_night_temperature",
+        "average_solar_irradiance",
+        "total_solar_irradiance",
+        "min_night_temperature",
+        "max_day_temperature",
+        "total_rainfall",
+        "min_day_temperature",
+        "min_temperature",
+        "average_vapor_pressure",
+        "wind_speed_avg",
+        "min_relative_humidity",
+        "max_relative_humidity"
+      ]
+    },
+    "cbam_historical_analysis_bias_adjust": {
+      "page": "cbam-reanalysis-bias-corrected.md",
+      "attributes": [
+        "max_temperature",
+        "min_temperature",
+        "total_solar_irradiance",
+        "total_rainfall"
+      ]
+    }
+  }
+}

@@ -1,15 +1,28 @@
-# GAP Ingestor Schedule
+# Forecast availability
 
-Below is the ingestor schedule of datasets in GAP.
+Model run time, provider publication time, GAP ingestion time and data availability are different events. A fixed clock-time schedule does not prove that a particular run is ready. Use available valid times and returned metadata when selecting a forecast.
 
+## Nominal horizons
 
-| Dataset | Frequency | Model Run (UTC) | Model Available (UTC) | GAP Start Time (UTC) | GAP End Time (UTC) | Available Time (UTC) | Retention Policy |
-|-------|-----------|-----------------|------------------------|---------------------|-------------------|----------------------|------------------|
-| CBAM Daily Short-Term Forecast 00Z | Once per day | 00:00:00 | – | 00:10:00 | 02:13:00 | 02:23:00 | Stored in the latest and historical Zarr |
-| CBAM Daily Short-Term Forecast 06Z | Twice per day | 06:00:00 | – | 08:30:00 | 09:20:00 | 09:40:00 | – |
-| CBAM Hourly Short-Term Forecast | Once per day | – | – | 00:30:00 | 06:03:00 | 06:43:00 | Stored in the latest Zarr only (no historical archive) |
-| Google GenCast | Once per day | 00:00:00 | 08:05:00 | 09:05:00 | 09:43 | 10:00 | Stored in the latest and historical Zarr |
-| Google GraphCast | Once per day | 18:00:00 | 00:45:00 | 02:00:00 | 02:30:00 | 02:35:00 | Stored in the latest and historical Zarr |
-| Google Nowcast | Four times per day (every 6 hours at :15 UTC) | – | – | 00:15:00<br>06:15:00<br>12:15:00<br>18:15:00 | 00:45:00<br>06:45:00<br>12:45:00<br>18:45:00 | 02:25:00<br>07:00:00<br>13:00:00<br>19:00:00 | 00:00 and 12:00 models stored in the historical Zarr |
-| Salient | Once per week (every Monday) | – | – | 04:00:00 | 04:52:00 | 05:58:00 | Stored in the latest and historical Zarr |
-| Salient GEMV2 | Once per week (every Monday) | – | – | 10:00:00 | 10:05:00 | 10:55:00 | Stored in the latest and historical Zarr |
+| Product | Catalogue horizon / time support |
+|---|---|
+| NextGen daily, including Nigeria | 10-day forecast, daily values |
+| NextGen hourly, including Nigeria | 4-day forecast, hourly values |
+| Google WeatherNext 2 | 15-day forecast; six-hour rainfall intervals |
+| Daily precipitation forecast | 14-day daily rainfall statistics |
+| Kenya rainfall forecast | 42-day daily rainfall |
+| NeuralGCM S2S | Historical catalogue labelled 2021–2025 and a separate realtime product; inspect available times |
+
+These labels are not guarantees of complete date or spatial coverage. The public options endpoint lists fields, not completed ingestion runs, and does not report freshness.
+
+## Choosing a run
+
+1. Check the [live catalogue](https://gap.tomorrownow.org/api/v1/docs/) and account access.
+2. Request a small point and date range within the forecast horizon.
+3. Where forecast archives are supported, set `forecast_date` explicitly. The API accepts a date or hourly initialisation such as `YYYY-MM-DDTHH`; support depends on the reader and archive.
+4. Inspect the returned dates and metadata and retain the original request with your analysis.
+5. If there is no data, distinguish an unavailable run, out-of-coverage location, delayed ingestion and missing measurements. Do not substitute zero.
+
+When comparing forecasts, align both their valid times and lead times. Do not apply the old GenCast/GraphCast timestamp adjustments to WeatherNext 2.
+
+For a confirmed publication schedule or archive-retention window, contact the GAP service administrator with the product and requested run. This guide does not publish unverified ingestion completion times.

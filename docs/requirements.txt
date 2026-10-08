@@ -21,3 +21,5 @@ black
 cffi
 # Needed for PDF back page QR Code
 qrcode
+# Local API guide link and catalogue validation
+beautifulsoup4

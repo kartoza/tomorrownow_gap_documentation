@@ -1,101 +1,33 @@
----
-title: Documentation
-summary: Tomorrow Now GAP
-  - Jeff Osundwa
-date: 2025-09-16
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2025, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# API keys
 
-# Managing API Keys on the Global Access Platform
+Sign in to the [Global Access Platform](https://gap.tomorrownow.org/) with an account that has access to the datasets you need.
 
-This guide explains how to generate, copy, and delete API keys from the Global Access Platform.
+## Create a key
 
----
+1. Open your profile menu and choose **API Keys**.
+2. Select **Generate new**.
+3. Enter a name, description and expiry date, then choose **Create**.
+4. Copy the key immediately. The full key is shown only once.
 
-## 1. Open the Platform
+Store the key in an environment variable or a secret store. Do not put it in a URL, shared notebook, screenshot or source repository.
 
-Go to the **Global Access Platform**.
-Click the **profile icon** in the top-right corner.
+## Use the key
 
-![Global Access Platform Home](img/api-token-1.png)
+The measurement API uses the `Token` authentication scheme:
 
----
+```bash
+export GAP_API_TOKEN='YOUR_API_KEY'
+curl --fail-with-body \
+  'https://gap.tomorrownow.org/api/v1/measurement/options/' \
+  --header "Authorization: Token $GAP_API_TOKEN"
+```
 
-## 2. Open API Key Settings
+An API key authenticates your account; it does not grant access to additional products. If a valid key receives a permission error, ask the GAP administrator to check your dataset access.
 
-From the dropdown menu, select **API Keys**.
+## Replace or delete a key
 
-![Select API Keys](img/api-token-2.png)
+The API key page lists each key's name, description, creation date and expiry. Generate a replacement before an existing key expires, update your applications, then delete the old key using its trash icon and confirm the deletion. Other keys remain available.
 
----
+A deleted or expired key cannot be used for subsequent requests. If a key is exposed, delete it and issue a replacement.
 
-## 3. View API Keys Page
-
-You will see the **My API Keys** page.  
-Click on **Generate new** to create a new API key.
-
-![My API Keys Page](img/api-token-3.png)
-
----
-
-## 4. Create a New API Key
-
-Fill in the required details:
-
-1. **Token Name**  
-2. **Token Description**  
-3. **Expiration Date**  
-4. Click **Create**
-
-![Create API Key Form](img/api-token-4.png)
-
----
-
-## 5. Copy the API Key
-
-After creation, the API key will be shown **only once**.  
-Click **Copy** to save it securely.
-
-![Copy API Key](img/api-token-5.png)
-
----
-
-## 6. API Key List
-
-Your API key will now appear in the list of keys with its **name, description, created date, and expiry date**.
-
-![API Key List](img/api-token-6.png)
-
----
-
-## 7. Delete an API Key
-
-To remove an API key, click the **trash icon** next to the key.
-
-![Delete API Key Option](img/api-token-7.png)
-
----
-
-## 8. Confirm Deletion
-
-Confirm the action by clicking **Delete**.
-
-![Confirm Delete](img/api-token-8.png)
-
----
-
-## 9. API Key Removed
-
-The list will be empty once the API key has been deleted.
-
-![Empty API Keys](img/api-token-9.png)
-
----
-
-## Notes
-- API keys are shown **once** — always copy and store them securely.  
-- Expired or deleted keys cannot be recovered.  
-- Use API keys for secure programmatic access to the Global Access Platform.
+[Make your first request](measurements/getting-started.md)

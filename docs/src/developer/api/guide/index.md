@@ -1,22 +1,20 @@
----
-title: Documentation
-summary: Tomorrow Now GAP
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# GAP API user guide
 
-# API user guide
+Get weather observations, historical climate, forecasts and soil data from the Global Access Platform.
 
-* **[API Keys:](./api-keys.md)** this section shows a tutorial to create and delete API keys.
-* **[Measurement API:](./measurements/overview.md)** this section explains the measurement API guide for both GET and POST method.
-  * [Overview](./measurements/overview.md) - Introduction to OSIRIS II Global Access Platform
-  * [Data Products](./measurements/data-products.md) - Available weather and climate data products
-  * [Attributes Reference](./measurements/attributes-reference.md) - Complete list of attributes for each product
-  * [Getting Started](./measurements/getting-started.md) - Authentication and basic API usage
-  * [Advanced Usage](./measurements/advanced-usage.md) - Code examples, location upload, and error codes
-* **[Access API Using R:](./access-api-using-r.md)** this section shows a tutorial to access the API using R.
-* **[Access API in Jupyter Notebook:](./access-api-using-jupyter.md)** this section shows a tutorial to access the API in Jupyter Notebook.
+1. [Create an API key](api-keys.md).
+2. [Choose a product and its fields](measurements/data-products.md).
+3. [Make a first request](measurements/getting-started.md).
+4. [Download data with Python / Jupyter](access-api-using-jupyter.md) or [R](access-api-using-r.md).
+
+Use the [interactive API](https://gap.tomorrownow.org/api/v1/docs/) to explore the deployed catalogue. Requests require an account with permission to access the chosen product.
+
+## Reference
+
+- [API overview](measurements/overview.md): endpoints and supported operations.
+- [Attribute reference](measurements/attributes-reference.md): product-specific names, units and ensemble fields.
+- [Forecast availability](measurements/ingestor-schedule.md): run dates, valid times and missing data.
+- [Advanced usage](measurements/advanced-usage.md): uploaded locations, background jobs and errors.
+- [Product changes](measurements/product-changes.md): guidance for integrations using withdrawn layers.
+
+This guide was reviewed on 28 September 2026. The product changes page distinguishes planned removals from the currently deployed catalogue.

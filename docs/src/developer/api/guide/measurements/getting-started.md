@@ -1,69 +1,75 @@
----
-title: Getting Started
-summary: Authentication and basic API usage
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# Make your first request
 
-# Getting Started with the API
+## 1. Authenticate
 
-In order to use the API, the user must be authenticated and must have authorisation to access the data.
+[Create an API key](../api-keys.md) and set it in your local environment:
 
-Let's see how to use the API and what sequence of API calls can lead us to get data for analysis.
+```bash
+export GAP_API_TOKEN='YOUR_API_KEY'
+```
 
-Once you open the above link the Swagger will open. Click on the 1️⃣ `Authorize` button, to open the authorisation form.
+Send it as `Authorization: Token YOUR_API_KEY`. Keep the key out of shared notebooks, source control and URLs. Basic authentication with your GAP username and password is also supported over HTTPS.
 
-![Authorise](../img/api-guide-1.png)
+In the [interactive API](https://gap.tomorrownow.org/api/v1/docs/), use **Authorize**, select an endpoint and choose **Try it out**. The exact authentication controls can differ by deployment.
 
-To authorize, please enter your `Username` and `Password` Once you have entered your credentials, click the `Authorize` button to complete the authorisation process.
+## 2. Discover products and fields
 
-![Authorise form](../img/api-guide-2.png)
+```bash
+curl --fail-with-body --get \
+  'https://gap.tomorrownow.org/api/v1/measurement/options/' \
+  --header "Authorization: Token $GAP_API_TOKEN"
+```
 
-Click on the close button or cross button to close the authorisation form.
+The response contains `products` (each with `variable_name` and `name`) and `attributes` (product identifier to field-name list). Copy exact identifiers into the request. Compare them with the [product catalogue](data-products.md); planned changes may not yet appear in the deployed service.
 
-![Close](../img/api-guide-3.png)
+## 3. Query a point
 
-**Examples of Usage of the OSIRIS II API**
+This example uses IMERG V07 daily satellite rainfall, an observational product, so its dates do not expire with a forecast horizon:
 
-Please note that the data in the examples provided below DO NOT reflect the actual data in TomorrowNow.
+```bash
+curl --fail-with-body --get \
+  'https://gap.tomorrownow.org/api/v1/measurement/' \
+  --header "Authorization: Token $GAP_API_TOKEN" \
+  --data-urlencode 'product=imerg_v07' \
+  --data-urlencode 'attributes=precipitation' \
+  --data-urlencode 'start_date=2026-09-01' \
+  --data-urlencode 'end_date=2026-09-03' \
+  --data-urlencode 'lat=-1.404244' \
+  --data-urlencode 'lon=35.008688' \
+  --data-urlencode 'output_type=json'
+```
 
-## Accessing the OSIRIS II API
+Inspect the returned coordinates, dates, units and missing values. Actual values and coverage depend on the service and your permissions.
 
-To use the API click on the Weather & Climate Data 1️⃣.
+## Request parameters
 
-![Measurement API](../img/api-guide-4.png)
+| Parameter | Meaning |
+|---|---|
+| `product` | Exact product identifier. |
+| `attributes` | Comma-separated attribute identifiers for that product. |
+| `start_date`, `end_date` | Requested data dates, `YYYY-MM-DD`; TAMSAT normals accept `MM-DD`. |
+| `start_time`, `end_time` | Optional UTC times, `HH:MM:SS`. |
+| `forecast_date` | Select an archived forecast run where supported: `YYYY-MM-DD`, or `YYYY-MM-DDTHH` for an hourly initialisation. |
+| `output_type` | `json`, `csv`, `netcdf` or reader-compatible `ascii`. |
+| `lat`, `lon` | A point in WGS84 decimal degrees. Supply both. |
+| `bbox` | `west,south,east,north` in WGS84 degrees. |
+| `location_name` | Name of a geometry uploaded by your account. |
+| `altitudes` | Optional lower and upper altitude bounds for relevant observations. |
+| `async` | `true` to submit a background job; otherwise the request waits for a result. |
 
-**Weather & Climate Data API:**
+Choose one location method: point, bounding box or uploaded location. Date-range limits vary by product. Static soil readers may not use dates, but supplying valid dates keeps requests consistent with the documented measurement interface.
 
-Click on the GET API it will show the parameters to enter to get the data. Click on the 1️⃣ `Try it out` button, to fill the detailed in the 2️⃣ available request parameters. After filling the details click on the 3️⃣ `Execute` button, to run the API.
+## 4. Use a forecast
 
-![GET API](../img/api-guide-5.png)
-![GET API](../img/api-guide-6.png)
+Choose available valid dates within the selected run's horizon. For example:
 
-**Example of response:**
+| Product | Example fields | Meaning |
+|---|---|---|
+| `nextgen_forecast` | `precip_accum_p50,precip_accum_p75,tmin_c,tmax_c` | Daily rainfall percentiles and temperature bounds. |
+| `nextgen_hourly_forecast` | `precip_intensity_p50,temp_c` | Hourly rainfall rate and temperature. |
+| `google_weathernext2` | `total_precipitation_6hr,temperature` | Ensemble rainfall and temperature. |
+| `precipitation_blend_forecast` | `primary,blend_q75,blend_scenario` | Gated daily amount, Q75 and availability/event scenario. |
 
-![GET API RESPONSE](../img/api-guide-7.png)
+Use Nigeria's dedicated NextGen identifiers for Nigeria. For reproducible comparisons, select `forecast_date` where supported and inspect the response; the requested run is not by itself proof of the provider's actual issuance time.
 
-**Available format types**
-
-### JSON
-
-This type is only available for querying by single point.
-![JSON](../img/api-guide-7.png)
-
-###  CSV
-
-The user can download the file to check the response
-![CSV](../img/api-guide-12.png)
-
-### NETCDF
-
-The user can download the file to check the response
-![netcdf](../img/api-guide-13.png)
-
-To read/write the netcdf file user can refer to below link
-https://docs.xarray.dev/en/stable/user-guide/io.html#netcdf
+[Python / Jupyter](../access-api-using-jupyter.md) · [R](../access-api-using-r.md) · [Background jobs and errors](advanced-usage.md)

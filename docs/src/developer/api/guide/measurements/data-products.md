@@ -1,41 +1,45 @@
----
-title: GAP Data Products
-summary: Available weather and climate data products
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# Data products
 
-# GAP Input Data Table
+Use the exact `product` identifier in API requests. The catalogue below covers **20 public product identifiers: 17 current and 3 legacy**, reviewed on 8 October 2026. Products and fields match what the public API serves today; fields scheduled for removal are marked on their pages. The live [options endpoint](https://gap.tomorrownow.org/api/v1/measurement/options/) and [interactive API](https://gap.tomorrownow.org/api/v1/docs/) show what the running service currently exposes; access also depends on your account permissions.
 
-## Historical Data
-| Product | Provider | Resolution | Source | Version | API product_type |
-|---------|----------|------------|--------|---------|------------------|
-| Automated Weather Stations (Arable) 2024-2025 | Arable weather stations | 300+ stations across East Africa | Arable (API) | 2024-2025 | arable_ground_observation |
-| Automated Weather Stations (TAHMO) (QC/QA) 2018 - 2025 v1 | TAHMO weather stations | 300+ stations across East Africa | TAHMO Gap Filled Data (csv) | 2018-2025 v1 | tahmo_ground_observation |
-| CBAM Daily Reanalysis (Bias-Corrected) 2012-2023 v1 | Tomorrow.io | 4km x 4km | Tomorrow.io CBAM 1F enhanced bias-corrected reanalysis | 2012-2023 v1 | cbam_historical_analysis_bias_adjust |
-| CBAM Daily Reanalysis (Raw) 2012-2024 v2 | Tomorrow.io | 4km x 4km | Tomorrow.io CBAM 1F enhanced bias-corrected reanalysis | 2012-2024 v2 | cbam_historical_analysis |
-| Disdrometer (Laser Rain Gauge) | disdrometers | | Tahmo (API) | | disdrometer_ground_observation |
-| Google Gencast | Google | 27830m | Google WeatherNext Gen Forecasts | | google_gencast |
-| Google Graphcast | Google | 27830m | Google WeatherNext Graph Forecasts | | google_graphcast |
-| Radiosonde Observations (Windborne) | WindBorne Systems | 100 weather balloons | Windborne Systems | | windborne_radiosonde_observation |
-| TAMSAT Precipitation Long-term Normals (20-year) | TAMSAT | | | | tamsat_ltn |
+## Forecasts
 
+| Product | API identifiers | Attribute reference |
+|---|---|---|
+| NextGen daily forecasts | `nextgen_forecast`, `nigeria_nextgen_daily_forecast` | [Fields](attributes-reference/nextgen-daily.md) |
+| NextGen hourly forecasts | `nextgen_hourly_forecast`, `nigeria_nextgen_hourly_forecast` | [Fields](attributes-reference/nextgen-hourly.md) |
+| KMSA Kenya daily rainfall forecast | `kenya_rainfall_daily` | [Fields](attributes-reference/kenya-rainfall.md) |
+| Google WeatherNext 2 | `google_weathernext2` | [Fields](attributes-reference/weathernext2.md) |
+| Daily precipitation forecast | `precipitation_blend_forecast` | [Fields](attributes-reference/precipitation-blend.md) |
+| NeuralGCM S2S | `neuralgcm_s2s`, `neuralgcm_s2s_realtime` | [Fields](attributes-reference/neuralgcm.md) |
 
-## Weather Forecasts
-| Product | Provider | Resolution | Source | Version | API product_type |
-|---------|----------|------------|--------|---------|------------------|
-| CBAM Weather Forecast Daily 10-day | Tomorrow.io | 4km x 4km | Tomorrow.io CBAM satellite enhanced short-term weather forecasts | | cbam_shortterm_forecast |
-| CBAM Weather Forecast Hourly 4-day | Tomorrow.io | 4km x 4km | Tomorrow.io CBAM satellite enhanced short-term weather forecasts | | cbam_shortterm_hourly_forecast |
-| Google Gencast | Google | 27830m | Google WeatherNext Gen Forecasts | | google_gencast |
-| Google Graphcast | Google | 27830m | Google WeatherNext Graph Forecasts | | google_graphcast |
-| Google Nowcast | Google | 5km x 5km |  | | google_nowcast |
-| Salient Predictions Weather Forecast - GEMv2 (3-month) | Salient | 28km x 28km | Salient (API) | v9 | salient_gemv2_forecast |
-| Salient Predictions Weather Forecast - Sub-seasonal to Seasonal (8-month) | Salient | 28km x 28km | Salient (API) | v9 | salient_seasonal_forecast |
+## Observations, historical data and soil
 
-> **Note:** The Today value from the CBAM short term weather forecast is stored and can be accessed for historical records dating back to 12 October 2024.
+| Product | API identifiers | Attribute reference |
+|---|---|---|
+| IMERG V07 daily rainfall | `imerg_v07` | [Fields](attributes-reference/imerg.md) |
+| Arable weather stations | `arable_ground_observation` | [Fields](attributes-reference/arable-stations.md) |
+| TAHMO weather stations | `tahmo_ground_observation` | [Fields](attributes-reference/tahmo-stations.md) |
+| Disdrometer observations | `disdrometer_ground_observation` | [Fields](attributes-reference/disdrometer.md) |
+| Windborne radiosonde observations | `windborne_radiosonde_observation` | [Fields](attributes-reference/radiosonde.md) |
+| TAMSAT rainfall long-term normals | `tamsat_ltn` | [Fields](attributes-reference/tamsat-ltn.md) |
+| iSDA Soil | `isda_soil` | [Fields](attributes-reference/isda-soil.md) |
+| SoilGrids v2 | `soilgrids_v2` | [Fields](attributes-reference/soilgrids.md) |
 
-> **Note on Google Gencast and Graphcast lead times:** When Google runs the Gencast model between 00:00 to 12:00, it is marked as 12:00. On GAP, the timestamp is adjusted to 00:00, so the lead time is decreased by 12 hours. The same applies to Graphcast, but with a 6-hour adjustment.
+## Legacy products
+
+These are still served by the public API, but are not recommended for new integrations.
+
+| Product | API identifiers | Status | Attribute reference |
+|---|---|---|---|
+| Google GenCast — Nigeria | `google_gencast_2_nigeria` | Retirement planned; use `nigeria_nextgen_daily_forecast` | [Fields](attributes-reference/google-gencast-nigeria.md) |
+| CBAM daily reanalysis — raw | `cbam_historical_analysis` | Legacy, still served; for historical rainfall use `imerg_v07` | [Fields](attributes-reference/cbam-reanalysis-raw.md) |
+| CBAM daily reanalysis — bias-corrected | `cbam_historical_analysis_bias_adjust` | Legacy, still served; for historical rainfall use `imerg_v07` | [Fields](attributes-reference/cbam-reanalysis-bias-corrected.md) |
+
+## Coverage and product choice
+
+A forecast horizon or year range is a catalogue label, not a guarantee that every run, date or point is populated. Query a small region first and inspect times, units and missing values. Station products and gridded products have different spatial support.
+
+NextGen, Nigeria NextGen and WeatherNext 2 are retained. FOCUS/1F models are not retired by this catalogue cleanup; they are not listed as separate public `/measurement/` identifiers in the reviewed catalogue. Use the access route supplied for your account rather than inventing a product identifier.
+
+For old integrations, read [product changes](product-changes.md). The timetable and forecast archive guidance is under [forecast availability](ingestor-schedule.md).

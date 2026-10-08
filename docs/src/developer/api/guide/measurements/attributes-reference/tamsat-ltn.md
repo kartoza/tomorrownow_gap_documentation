@@ -1,16 +1,14 @@
----
-title: TAMSAT Precipitation Long-term Normals (20-year)
-summary: Attributes for TAMSAT Precipitation Long-term Normals
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# TAMSAT rainfall long-term normals
 
-# TAMSAT Precipitation Long-term Normals (20-year)
+Twenty-year rainfall normals. Use month-day dates (MM-DD) for the requested seasonal period. These are climatological values, not current observations or a forecast.
 
-| Name | Description | Unit | API attribute name |
-|------|-------------|------|---------------------|
-| Precipitation Total | | mm | precipitation_total |
+## `tamsat_ltn`
+
+Catalogue label: **TAMSAT Precipitation Long-term Normals (20-year)**.
+
+| API attribute | Name / meaning | Output unit | Ensemble field |
+|---|---|---|---|
+| `precipitation_total` | Precipitation total | mm | No |
+
+
+[Choose another product](../data-products.md) · [Request parameters](../getting-started.md)

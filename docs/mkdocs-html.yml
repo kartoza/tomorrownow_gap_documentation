@@ -84,6 +84,14 @@ plugins:
 
   - redirects:
       redirect_maps:
+        developer/api/guide/measurements/attributes-reference/cbam-daily-10day.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/cbam-hourly-4day.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/google-gencast.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/google-graphcast.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/google-nowcast.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/salient-gemv2.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/salient-seasonal-forecast.md: developer/api/guide/measurements/product-changes.md
+        developer/api/guide/measurements/attributes-reference/cbam-reanalysis-hourly.md: developer/api/guide/measurements/product-changes.md
       #see https://github.com/mkdocs/mkdocs-redirects/tree/master#using
       #'old.md': 'new.md'
       #'old/file.md': 'new/file.md'

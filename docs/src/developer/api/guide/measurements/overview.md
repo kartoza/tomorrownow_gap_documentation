@@ -1,36 +1,28 @@
----
-title: Documentation
-summary: Tomorrow Now GAP
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# Measurements API
 
-# OSIRIS II Global Access Platform
+The measurement API returns selected fields for a location and date range. Use one product per request and choose fields from that product's [reference](attributes-reference.md).
 
-**Project Overview**
+Base URL: `https://gap.tomorrownow.org/api/v1/`.
 
-TomorrowNow.org is partnering with the Bill and Melinda Gates Foundation (BMGF) to develop and assess new weather technologies to support the seed breeding ecosystem in East Africa. The "Next-Gen" project focuses on adopting new or next-generation technologies to improve data access and quality.
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `measurement/options/` | Discover product identifiers and their available attribute names. |
+| GET | `measurement/` | Retrieve measurements or submit an asynchronous request. |
+| GET | `measurement/job-status/{job_id}/` | Check your job and retrieve its result or download URL. |
+| POST | `location/?location_name=NAME` | Upload a geometry file for later measurement requests. |
+| GET | `consensus_blending/` | Request the daily precipitation layer with fixed fields `precipitation` and `primary`. |
 
-**Goals**
+Measurements use **GET**. Geometry uploads use **POST**. A product appearing in discovery does not guarantee your account has permission to read it.
 
-The project aims to address two key challenges limiting the uptake of weather data in Africa:
+## Output formats
 
-1. **Data Access**: Provide curated datasets from top weather data providers, streamlined APIs, and a global access strategy to ensure long-term, low-cost access to weather data.
+| `output_type` | Use |
+|---|---|
+| `json` | A single latitude/longitude point; inspect metadata and data in the response. |
+| `csv` | Tabular downloads. Do not mix ensemble and non-ensemble attributes in one CSV request. |
+| `netcdf` | Grids, areas and ensemble data. Not supported for upper-air radiosonde observations. |
+| `ascii` | Supported for compatible readers; check the interactive API and start with a small request. |
 
-2. **Data Quality**: Localise forecast models using a network of ground observation stations, apply bias adjustment techniques, and produce analysis-ready datasets using best-practice quality control methods.
+Use NetCDF when preserving coordinates and ensemble dimensions matters. Read the returned metadata rather than assuming all fields share a unit, scale or time interval. Missing values do not mean zero rainfall.
 
-**Objectives**
-
-* Improve data quality by measuring and benchmarking data quality and cost across top models for historical climate reanalysis, short-term weather forecasting, and S2S weather forecasting.
-
-* Enhance data access through a global access strategy and partnerships with data providers.
-
-**Impact**
-
-By addressing data access and quality challenges, the project aims to accelerate the adoption of weather intelligence across the smallholder farming ecosystem in East Africa.
-
-TomorrowNow provides access to the data through a RESTful API, available at https://gap.tomorrownow.org/api/v1/docs/
+[Get started](getting-started.md) · [Choose a product](data-products.md)

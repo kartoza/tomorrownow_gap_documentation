@@ -1,19 +1,19 @@
----
-title: Radiosonde Observations (Windborne)
-summary: Attributes for Radiosonde Observations (Windborne)
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# Windborne radiosonde observations
 
-# Radiosonde Observations (Windborne)
+Upper-air observations. Use altitudes to constrain the vertical range where appropriate. NetCDF output is not supported for upper-air observations by this endpoint; use JSON for a point or CSV.
 
-| Name | Description | Unit | API attribute name |
-|------|-------------|------|---------------------|
-| Atmospheric Pressure | | hPa | atmospheric_pressure |
-| Relative Humidity | | % | relative_humidity |
-| Specific Humidity | | mg/kg | specific_humidity |
-| Temperature | | °C | temperature |
+## `windborne_radiosonde_observation`
+
+Catalogue label: **Radiosonde Observations (Windborne)**.
+
+| API attribute | Name / meaning | Output unit | Ensemble field |
+|---|---|---|---|
+| `relative_humidity` | Relative humidity | % | No |
+| `specific_humidity` | Specific Humidity | mg/kg | No |
+| `atmospheric_pressure` | Atmospheric Pressure | kPa | No |
+| `temperature` | Temperature | °C | No |
+| `wind_speed_u` | Wind speed in direction of increasing longitude | m/s | No |
+| `wind_speed_v` | Wind speed in direction of increasing latitude | m/s | No |
+
+
+[Choose another product](../data-products.md) · [Request parameters](../getting-started.md)

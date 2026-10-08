@@ -1,0 +1,305 @@
+{
+  "info": {
+    "name": "GAP API \u2014 current catalogue",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "Token {{gap_api_token}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://gap.tomorrownow.org/api/v1"
+    },
+    {
+      "key": "gap_api_token",
+      "value": ""
+    },
+    {
+      "key": "forecast_start",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "key": "forecast_end",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "key": "job_id",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Discover current fields",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/measurement/options/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "measurement",
+            "options"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Historical point",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/measurement/?product=imerg_v07&attributes=precipitation&start_date=2026-09-01&end_date=2026-09-03&lat=-1.404244&lon=35.008688&output_type=json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "measurement"
+          ],
+          "query": [
+            {
+              "key": "product",
+              "value": "imerg_v07"
+            },
+            {
+              "key": "attributes",
+              "value": "precipitation"
+            },
+            {
+              "key": "start_date",
+              "value": "2026-09-01"
+            },
+            {
+              "key": "end_date",
+              "value": "2026-09-03"
+            },
+            {
+              "key": "lat",
+              "value": "-1.404244"
+            },
+            {
+              "key": "lon",
+              "value": "35.008688"
+            },
+            {
+              "key": "output_type",
+              "value": "json"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "NextGen daily",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/measurement/?product=nextgen_forecast&attributes=precip_accum_p50,precip_accum_p75,tmin_c,tmax_c&start_date={{forecast_start}}&end_date={{forecast_end}}&lat=-1.404244&lon=35.008688&output_type=json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "measurement"
+          ],
+          "query": [
+            {
+              "key": "product",
+              "value": "nextgen_forecast"
+            },
+            {
+              "key": "attributes",
+              "value": "precip_accum_p50,precip_accum_p75,tmin_c,tmax_c"
+            },
+            {
+              "key": "start_date",
+              "value": "{{forecast_start}}"
+            },
+            {
+              "key": "end_date",
+              "value": "{{forecast_end}}"
+            },
+            {
+              "key": "lat",
+              "value": "-1.404244"
+            },
+            {
+              "key": "lon",
+              "value": "35.008688"
+            },
+            {
+              "key": "output_type",
+              "value": "json"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daily precipitation",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/measurement/?product=precipitation_blend_forecast&attributes=primary,blend_q75,blend_scenario&start_date={{forecast_start}}&end_date={{forecast_end}}&lat=-1.404244&lon=35.008688&output_type=json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "measurement"
+          ],
+          "query": [
+            {
+              "key": "product",
+              "value": "precipitation_blend_forecast"
+            },
+            {
+              "key": "attributes",
+              "value": "primary,blend_q75,blend_scenario"
+            },
+            {
+              "key": "start_date",
+              "value": "{{forecast_start}}"
+            },
+            {
+              "key": "end_date",
+              "value": "{{forecast_end}}"
+            },
+            {
+              "key": "lat",
+              "value": "-1.404244"
+            },
+            {
+              "key": "lon",
+              "value": "35.008688"
+            },
+            {
+              "key": "output_type",
+              "value": "json"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Submit historical export",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/measurement/?product=imerg_v07&attributes=precipitation&start_date=2026-09-01&end_date=2026-09-03&lat=-1.404244&lon=35.008688&output_type=netcdf&async=true",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "measurement"
+          ],
+          "query": [
+            {
+              "key": "product",
+              "value": "imerg_v07"
+            },
+            {
+              "key": "attributes",
+              "value": "precipitation"
+            },
+            {
+              "key": "start_date",
+              "value": "2026-09-01"
+            },
+            {
+              "key": "end_date",
+              "value": "2026-09-03"
+            },
+            {
+              "key": "lat",
+              "value": "-1.404244"
+            },
+            {
+              "key": "lon",
+              "value": "35.008688"
+            },
+            {
+              "key": "output_type",
+              "value": "netcdf"
+            },
+            {
+              "key": "async",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Job status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/measurement/job-status/{{job_id}}/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "measurement",
+            "job-status",
+            "{{job_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload location",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/location/?location_name=my_fields",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "location"
+          ],
+          "query": [
+            {
+              "key": "location_name",
+              "value": "my_fields"
+            }
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

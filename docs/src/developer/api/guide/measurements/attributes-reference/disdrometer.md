@@ -1,30 +1,28 @@
----
-title: Disdrometer (Laser Rain Gauge)
-summary: Attributes for Disdrometer (Laser Rain Gauge)
-  - Irwan Fathurrahman
-date: 2024-06-18
-some_url: https://github.com/kartoza/tomorrownow_gap.git
-copyright: Copyright 2024, Kartoza
-contact:
-license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
----
+# Disdrometer observations
 
-# Disdrometer (Laser Rain Gauge)
+Ground observations from the disdrometer dataset. Select only the fields needed and check the measurement units and timestamps.
 
-| Name | Description | Unit | API attribute name |
-|------|-------------|------|---------------------|
-| Atmospheric Pressure | | kPa | atmospheric_pressure |
-| Depth of Water | | mm | depth_of_water |
-| Electrical Conductivity of Precipitation | | mS/cm | electrical_conductivity_of_precipitation |
-| Electrical Conductivity of Water | | mS/cm | electrical_conductivity_of_water |
-| Lightning Distance | | km | lightning_distance |
-| Precipitation | | mm/day | precipitation |
-| Precipitation Total | | mm | precipitation_total |
-| Relative Humidity | | % | relative_humidity |
-| Shortwave Radiation | | W/m2 | shortwave_radiation |
-| Soil Moisture Content | | m3/m3 | soil_moisture_content |
-| Soil Temperature | | °C | soil_temperature |
-| Surface Air Temperature | | °C | surface_air_temperature |
-| Wind Gusts | | m/s | wind_gusts |
-| Wind Heading | | degree | wind_heading |
-| Wind Speed | | m/s | wind_speed |
+## `disdrometer_ground_observation`
+
+Catalogue label: **Disdrometer (Laser Rain Gauge)**.
+
+| API attribute | Name / meaning | Output unit | Ensemble field |
+|---|---|---|---|
+| `atmospheric_pressure` | Atmospheric Pressure | kPa | No |
+| `depth_of_water` | Depth of Water | mm | No |
+| `electrical_conductivity_of_precipitation` | Electrical Conductivity of Precipitation | mS/cm | No |
+| `electrical_conductivity_of_water` | Electrical Conductivity of Water | mS/cm | No |
+| `lightning_distance` | Lightning Distance | km | No |
+| `shortwave_radiation` | Shortwave Radiation | W/m2 | No |
+| `soil_moisture_content` | Soil Moisture Content | m3/m3 | No |
+| `soil_temperature` | Soil Temperature | °C | No |
+| `surface_air_temperature` | Surface Air Temperature | °C | No |
+| `wind_speed` | Wind speed | m/s | No |
+| `wind_gusts` | Wind Gusts | m/s | No |
+| `precipitation_total` | Precipitation total | mm | No |
+| `precipitation` | Precipitation | mm | No |
+| `relative_humidity` | Relative humidity | % | No |
+| `wind_heading` | Wind Heading | degree | No |
+
+
+[Choose another product](../data-products.md) · [Request parameters](../getting-started.md)
